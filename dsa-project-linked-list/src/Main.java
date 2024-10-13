@@ -4,7 +4,7 @@ import searchModule.searchContact;
 import deleteContactModule.DeleteContact;
 import insertContactModule.InsertContact;
 import sortModule.MergeSortFile;
-// import updateModule.UpdateContact;
+import updateModule.UpdateContact;
 import displayContactModule.DisplayContacts;
 
 public class Main {
@@ -32,7 +32,7 @@ public class Main {
                     DisplayContacts.displayContacts();
                     break;
                 case 5:
-                    //UpdateContact.searchAndUpdate("John", "Doe");
+                    UpdateContact.searchAndUpdate(null, null);
                     break;
                 case 6:
                     System.out.println("Exiting...");
@@ -86,15 +86,15 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scanner.nextLine();
-        searchContact.searchContact(firstName, lastName);
+        searchContact.findContact(firstName, lastName);
 }
 
-private static void updateContact(Scanner scanner) {
+private static void UpdateContact(Scanner scanner) {
     System.out.print("Enter first name: ");
     String firstName = scanner.nextLine();
     System.out.print("Enter last name: ");
     String lastName = scanner.nextLine();
-    searchContact.searchContact(firstName, lastName);
+    searchContact.findContact(firstName, lastName);
 }
 
     private static void deleteContact(Scanner scanner) {

@@ -9,7 +9,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class searchContact {
-    public static void searchContact() {
+    public static void searchForContact() {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter first name of the contact you want to search for: ");
@@ -18,12 +18,12 @@ public class searchContact {
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scan.nextLine();
 
-        searchContact(firstName, lastName);
+        findContact(firstName, lastName);
         
         scan.close();
     }
 
-    public static void searchContact(String firstName, String lastName) {
+    public static void findContact(String firstName, String lastName) {
         String file = "dsa-project-linked-list\\src\\data\\contacts.csv"; // Path to your contacts CSV file
         BufferedReader reader = null;  // Initialize BufferedReader
         String line; // Read each line of the file 
