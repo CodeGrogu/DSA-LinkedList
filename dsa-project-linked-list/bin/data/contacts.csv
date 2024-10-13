@@ -1,249 +1,44 @@
-Adolf,David,0818366173,adolfdavid17@gmail.org
-John,Doe,0811234567,johndoe@example.com
-Jane,Smith,0812345678,janesmith@example.com
-Alice,Johnson,0813456789,alicejohnson@example.com
-Bob,Brown,0814567890,bobbrown@example.com
-Charlie,Davis,0815678901,charliedavis@example.com
-Eve,Wilson,0816789012,evewilson@example.com
-Frank,Moore,0817890123,frankmoore@example.com
-Grace,Taylor,0818901234,gracetaylor@example.com
-Hank,Anderson,0819012345,hankanderson@example.com
-Ivy,Thomas,0810123456,ivythomas@example.com
-Jack,Jackson,0811234568,jackjackson@example.com
-Kathy,White,0812345679,kathywhite@example.com
-Leo,Harris,0813456780,leoharris@example.com
-Mona,Martin,0814567891,monamartin@example.com
-Nina,Thompson,0815678902,ninathompson@example.com
-Oscar,Garcia,0816789013,oscargarcia@example.com
-Paul,Martinez,0817890124,paulmartinez@example.com
-Quinn,Robinson,0818901235,quinnrobinson@example.com
-Rita,Clark,0819012346,ritaclark@example.com
-Sam,Lee,0810123457,samlee@example.com
-Tina,Walker,0811234569,tinawalker@example.com
-Uma,Hall,0812345670,umahall@example.com
-Vince,Allen,0813456781,vinceallen@example.com
-Wendy,Young,0814567892,wendyyoung@example.com
-Xander,Hernandez,0815678903,xanderhernandez@example.com
-Yara,King,0816789014,yaraking@example.com
-Zane,Wright,0817890125,zanewright@example.com
-Anna,Lopez,0818901236,annalopez@example.com
-Ben,Scott,0819012347,benscott@example.com
-Cathy,Green,0810123458,cathygreen@example.com
-Dan,Baker,0811234570,danbaker@example.com
-Ella,Adams,0812345671,ellaadams@example.com
-Fred,Nelson,0813456782,frednelson@example.com
-Gina,Carter,0814567893,ginacarter@example.com
-Hugo,Mitchell,0815678904,hugomitchell@example.com
-Iris,Perez,0816789015,irisperez@example.com
-Jake,Roberts,0817890126,jakeroberts@example.com
-Kara,Turner,0818901237,karaturner@example.com
-Liam,Phillips,0819012348,liamphillips@example.com
-Mia,Campbell,0810123459,miacampbell@example.com
-Noah,Parker,0811234571,noahparker@example.com
-Olivia,Evans,0812345672,oliviaevans@example.com
-Pete,Edwards,0813456783,peteedwards@example.com
-Quincy,Collins,0814567894,quincycollins@example.com
-Rachel,Stewart,0815678905,rachelstewart@example.com
-Steve,Sanchez,0816789016,stevesanchez@example.com
-Tara,Morris,0817890127,taramorris@example.com
-Ulysses,Rogers,0818901238,ulyssesrogers@example.com
-Vera,Reed,0819012349,verareed@example.com
-Will,Cooper,0810123460,willcooper@example.com
-Xena,Richardson,0811234572,xenarichardson@example.com
-Yvonne,Cox,0812345673,yvonnecox@example.com
-Zack,Howard,0813456784,zackhoward@example.com
-Amy,Ward,0814567895,amyward@example.com
-Brian,Bailey,0815678906,brianbailey@example.com
-Cindy,Bell,0816789017,cindybell@example.com
-Derek,Brooks,0817890128,derekbrooks@example.com
-Eva,Bennett,0818901239,evabennett@example.com
-Finn,Gray,0819012350,finngray@example.com
-Gail,James,0810123461,gailjames@example.com
-Hank,Watson,0811234573,hankwatson@example.com
-Ivy,Bryant,0812345674,ivybryant@example.com
-Jack,Wood,0813456785,jackwood@example.com
-Kara,Barnes,0814567896,karabarnes@example.com
-Leo,Ross,0815678907,leoross@example.com
-Mona,Henderson,0816789018,monahenderson@example.com
-Nina,Coleman,0817890129,ninacoleman@example.com
-Oscar,Jenkins,0818901240,oscarjenkins@example.com
-Paul,Perry,0819012351,paulperry@example.com
-Quinn,Long,0810123462,quinnlong@example.com
-Rita,Patterson,0811234574,ritapatterson@example.com
-Sam,Hughes,0812345675,samhughes@example.com
-Tina,Flores,0813456786,tinaflores@example.com
-Uma,Washington,0814567897,umawashington@example.com
-Vince,Butler,0815678908,vincebutler@example.com
-Wendy,Simmons,0816789019,wendysimmons@example.com
-Xander,Foster,0817890130,xanderfoster@example.com
-Yara,Gonzales,0818901241,yaragonzales@example.com
-Zane,Bryant,0819012352,zanebryant@example.com
-Anna,Alexander,0810123463,annaalexander@example.com
-Ben,Russell,0811234575,benrussell@example.com
-Cathy,Griffin,0812345676,cathygriffin@example.com
-Dan,Diaz,0813456787,dandiaz@example.com
-Ella,Hayes,0814567898,ellahayes@example.com
-Fred,Myers,0815678909,fredmyers@example.com
-Gina,Ford,0816789020,ginaford@example.com
-Hugo,Hamilton,0817890131,hugohamilton@example.com
-Iris,Graham,0818901242,irisgraham@example.com
-Jake,Sullivan,0819012353,jakesullivan@example.com
-Kara,Wallace,0810123464,karawallace@example.com
-Liam,Woods,0811234576,liamwoods@example.com
-Mia,Cole,0812345677,miacole@example.com
-Noah,West,0813456788,noahwest@example.com
-Olivia,Jordan,0814567899,oliviajordan@example.com
-Pete,Owens,0815678910,peteowens@example.com
-Quincy,Reynolds,0816789021,quincyreynolds@example.com
-Rachel,Fisher,0817890132,rachelfisher@example.com
-Steve,Ellis,0818901243,steveellis@example.com
-Tara,Harrison,0819012354,taraharrison@example.com
-Ulysses,Gibson,0810123465,ulyssesgibson@example.com
-Vera,McDonald,0811234577,veramcdonald@example.com
-Will,Cruz,0812345678,willcruz@example.com
-Xena,Marshall,0813456789,xenamarshall@example.com
-Yvonne,Ortiz,0814567900,yvonneortiz@example.com
-Zack,Gomez,0815678911,zackgomez@example.com
-Amy,Murray,0816789022,amymurray@example.com
-Brian,Ford,0817890133,brianford@example.com
-Cindy,Kim,0818901244,cindykim@example.com
-Derek,Simpson,0819012355,dereksimpson@example.com
-Eva,Stevens,0810123466,evastevens@example.com
-Finn,Payne,0811234578,finnpayne@example.com
-Gail,Ray,0812345679,gailray@example.com
-Hank,Spencer,0813456790,hankspencer@example.com
-Ivy,Arnold,0814567901,ivyarnold@example.com
-Jack,Stone,0815678912,jackstone@example.com
-Kara,Webb,0816789023,karawebb@example.com
-Leo,Tucker,0817890134,leotucker@example.com
-Mona,Freeman,0818901245,monafreeman@example.com
-Nina,Black,0819012356,ninablack@example.com
-Oscar,Clark,0810123467,oscarclark@example.com
-Paul,Howard,0811234579,paulhoward@example.com
-Quinn,Ward,0812345680,quinnward@example.com
-Rita,Bailey,0813456791,ritabailey@example.com
-Sam,Bell,0814567902,sambell@example.com
-Tina,Brooks,0815678913,tinabrooks@example.com
-Uma,Bennett,0816789024,umabennett@example.com
-Vince,Gray,0817890135,vincegray@example.com
-Wendy,James,0818901246,wendyjames@example.com
-Xander,Watson,0819012357,xanderwatson@example.com
-Yara,Bryant,0810123468,yarabryant@example.com
-Zane,Wood,0811234580,zanewood@example.com
-Anna,Barnes,0812345681,annabarnes@example.com
-Ben,Ross,0813456792,benross@example.com
-Cathy,Henderson,0814567903,cathyhenderson@example.com
-Dan,Coleman,0815678914,dancoleman@example.com
-Ella,Jenkins,0816789025,ellajenkins@example.com
-Fred,Perry,0817890136,fredperry@example.com
-Gina,Long,0818901247,ginalong@example.com
-Hugo,Patterson,0819012358,hugopatterson@example.com
-Iris,Hughes,0810123469,irishughes@example.com
-Jake,Flores,0811234581,jakeflores@example.com
-Kara,Washington,0812345682,karawashington@example.com
-Liam,Butler,0813456793,liambutler@example.com
-Mia,Simmons,0814567904,miasimmons@example.com
-Noah,Foster,0815678915,noahfoster@example.com
-Olivia,Gonzales,0816789026,oliviagonzales@example.com
-Pete,Bryant,0817890137,petebryant@example.com
-Quincy,Alexander,0818901248,quincyalexander@example.com
-Rachel,Russell,0819012359,rachelrussell@example.com
-Steve,Griffin,0810123470,stevegriffin@example.com
-Tara,Diaz,0811234582,taradiaz@example.com
-Ulysses,Hayes,0812345683,ulysseshayes@example.com
-Vera,Myers,0813456794,veramyers@example.com
-Will,Ford,0814567905,willford@example.com
-Xena,Hamilton,0815678916,xenahamilton@example.com
-Yvonne,Graham,0816789027,yvonnegraham@example.com
-Zack,Sullivan,0817890138,zacksullivan@example.com
-Amy,Wallace,0818901249,amywallace@example.com
-Brian,Woods,0819012360,brianwoods@example.com
-Cindy,Cole,0810123471,cindycole@example.com
-Derek,West,0811234583,derekwest@example.com
-Eva,Jordan,0812345684,evajordan@example.com
-Finn,Owens,0813456795,finnowens@example.com
-Gail,Reynolds,0814567906,gailreynolds@example.com
-Hank,Fisher,0815678917,hankfisher@example.com
-Ivy,Ellis,0816789028,ivyellis@example.com
-Jack,Harrison,0817890139,jackharrison@example.com
-Kara,Gibson,0818901250,karagibson@example.com
-Leo,McDonald,0819012361,leomcdonald@example.com
-Mona,Cruz,0810123472,monacruz@example.com
-Nina,Marshall,0811234584,ninamarshall@example.com
-Oscar,Ortiz,0812345685,oscarortiz@example.com
-Paul,Gomez,0813456796,paulgomez@example.com
-Quinn,Murray,0814567907,quinnmurray@example.com
-Rita,Ford,0815678918,ritaford@example.com
-Sam,Simpson,0816789029,samsimpson@example.com
-Tina,Stevens,0817890140,tinastevens@example.com
-Uma,Payne,0818901251,umapayne@example.com
-Vince,Ray,0819012362,vinceray@example.com
-Wendy,Spencer,0810123473,wendyspencer@example.com
-Xander,Arnold,0811234585,xanderarnold@example.com
-Yara,Stone,0812345686,yarastone@example.com
-Zane,Webb,0813456797,zanewebb@example.com
-Anna,Tucker,0814567908,annatucker@example.com
-Ben,Freeman,0815678919,benfreeman@example.com
-Cathy,Black,0816789030,cathyblack@example.com
-Dan,Clark,0817890141,danclark@example.com
-Ella,Howard,0818901252,ellahoward@example.com
-Fred,Ward,0819012363,fredward@example.com
-Gina,Bailey,0810123474,ginabailey@example.com
-Hugo,Bell,0811234586,hugobell@example.com
-Ivy,Brooks,0812345687,ivybrooks@example.com
-Jack,Bennett,0813456798,jackbennett@example.com
-Kara,Gray,0814567909,karagray@example.com
-Leo,James,0815678920,leojames@example.com
-Mona,Watson,0816789031,monawatson@example.com
-Nina,Bryant,0817890142,ninabryant@example.com
-Oscar,Wood,0818901253,oscarwood@example.com
-Paul,Barnes,0819012364,paulbarnes@example.com
-Quinn,Ross,0810123475,quinnross@example.com
-Rita,Henderson,0811234587,ritahenderson@example.com
-Sam,Coleman,0812345688,samcoleman@example.com
-Tina,Jenkins,0813456799,tinajenkins@example.com
-Uma,Perry,0814567910,umaperry@example.com
-Vince,Long,0815678921,vincelong@example.com
-Wendy,Patterson,0816789032,wendypatterson@example.com
-Xander,Hughes,0817890143,xanderhughes@example.com
-Yara,Flores,0818901254,yaraflores@example.com
-Zane,Washington,0819012365,zanewashington@example.com
-Anna,Butler,0810123476,annabutler@example.com
-Ben,Simmons,0811234588,bensimmons@example.com
-Cathy,Foster,0812345689,cathyfoster@example.com
-Dan,Gonzales,0813456800,dangonzales@example.com
-Ella,Bryant,0814567911,ellabryant@example.com
-Fred,Alexander,0815678922,fredalexander@example.com
-Gina,Russell,0816789033,ginarussell@example.com
-Hugo,Griffin,0817890144,hugogriffin@example.com
-Ivy,Diaz,0818901255,ivydiaz@example.com
-Jack,Hayes,0819012366,jackhayes@example.com
-Kara,Myers,0810123477,karamyers@example.com
-Leo,Ford,0811234589,leoford@example.com
-Mona,Hamilton,0812345690,monahamilton@example.com
-Nina,Graham,0813456801,ninagraham@example.com
-Oscar,Sullivan,0814567912,oscarsullivan@example.com
-Paul,Wallace,0815678923,paulwallace@example.com
-Quinn,Woods,0816789034,quinnwoods@example.com
-Rachel,Cole,0817890145,rachelcole@example.com
-Steve,West,0818901256,stevewest@example.com
-Tara,Jordan,0819012367,tarajordan@example.com
-Ulysses,Owens,0810123478,ulyssesowens@example.com
-Vera,Reynolds,0811234590,verareynolds@example.com
-Will,Fisher,0812345691,willfisher@example.com
-Xena,Ellis,0813456802,xenaellis@example.com
-Yvonne,Harrison,0814567913,yvonneharrison@example.com
-Zack,Gibson,0815678924,zackgibson@example.com
-Amy,McDonald,0816789035,amymcdonald@example.com
-Brian,Cruz,0817890146,briancruz@example.com
-Cindy,Marshall,0818901257,cindymarshall@example.com
-Derek,Ortiz,0819012368,derekortiz@example.com
-Eva,Gomez,0810123479,evagomez@example.com
-Finn,Murray,0811234591,finmurray@example.com
-Gail,Ford,0812345692,gailford@example.com
-Hank,Simpson,0813456803,hanksimpson@example.com
-Ivy,Stevens,0814567914,ivystevens@example.com
-Jack,Payne,0815678925,jackpayne@example.com
-Kara,Ray,0816789036,kararay@example.com
-Leo,Spencer,0817890147,leospencer@example.com
-Mona,Arnold,0818901258,monaarnold@example.com
+Abraham,Namaseb,abrahamnamaseb@example.com,+264811902345,TransNamib,Train Operator,Tsumeb,Oshikoto,Namibia,Abraham keeps the wheels turning in the right direction.
+Adolf,Hamukwaya,adolfhamukwaya@example.com,+264812901345,O&L Group,Logistics Coordinator,Windhoek,Khomas,Namibia,Adolf never lets a delivery arrive late.
+Anna,Shilongo,annashilongo@example.com,+264812345678,HealthNam,Medical Practitioner,Ondangwa,Oshana,Namibia,Anna is always there when you need her.
+Anna,Smith,annasmith@example.com,+447701234567,UKHealth,Doctor,London,England,United Kingdom,Anna brings care and compassion to every patient.
+Christina,Shivute,christinashivute@example.com,+264813901245,Etosha Tours,Travel Guide,Outjo,Kunene,Namibia,Christina makes every tour unforgettable.
+Daniel,Shivute,danielshivute@example.com,+264816457890,UNAM,Lecturer,Oshakati,Oshana,Namibia,Daniel is a teacher who ignites curiosity in his students.
+David,Hausiku,davidhausiku@example.com,+264813456789,BankWindhoek,Financial Analyst,Rundu,Kavango East,Namibia,David never misses a detail.
+Eva,Nangolo,evanangolo@example.com,+264813245678,PowerNam,Electrical Technician,Outapi,Omusati,Namibia,Eva is always electrifying every room she enters.
+Frans,Angula,fransangula@example.com,+264817456890,NHE,Real Estate Agent,Windhoek,Khomas,Namibia,Frans knows the perfect home for everyone.
+Frederick,Ndjoze,frederickndjoze@example.com,+264813124567,City of Windhoek,Architect,Windhoek,Khomas,Namibia,Frederick designs dreams into reality.
+Helvi,Ndakolo,helvindakolo@example.com,+264816578901,Standard Bank,Branch Manager,Walvis Bay,Erongo,Namibia,Helvi leads with passion and vision.
+Hilma,Nandjebo,hilmanandjebo@example.com,+264815234678,Private,Freelancer,Windhoek,Khomas,Namibia,Hilma is always thinking outside the box.
+Iyaloo,Shilunga,iyalooshilunga@example.com,+264811890234,Erongo Marine,Operations Manager,Walvis Bay,Erongo,Namibia,Iyaloo keeps the team moving forward smoothly.
+Johanna,Iiyambo,johannaiiyambo@example.com,+264819801234,Gondwana,Guest Relations Manager,Windhoek,Khomas,Namibia,Johanna makes every guest feel like family.
+Johannes,Amupolo,johannesamupolo@example.com,+264811234567,TechNam,Software Engineer,Windhoek,Khomas,Namibia,Always the first to solve problems.
+John,Shikongo,johnshikongo@example.com,+264818679012,Air Namibia,Pilot,Windhoek,Khomas,Namibia,John takes everyone to new heights.
+John,Doe,johndoe@example.com,+19801234567,Tech Corp,Software Developer,New York,New York,USA,John is always coding the next big thing.
+Jonas,Haitota,jonashaitota@example.com,+264814123567,B2Gold Namibia,Mining Engineer,Otavi,Otjozondjupa,Namibia,Jonas digs deep to find the best solutions.
+Joseph,Kambonde,josephkambonde@example.com,+264818901234,Nedbank Namibia,Loan Officer,Keetmanshoop,Karas,Namibia,Joseph is calm under pressure and delivers every time.
+Julius,Nakale,juliusnakale@example.com,+264816345789,GIPF,Financial Advisor,Mariental,Hardap,Namibia,Julius makes complicated things easy to understand.
+Justine,Nambahu,justinenambahu@example.com,+264814235678,MTC,Customer Service Representative,Windhoek,Khomas,Namibia,Justine always finds a way to make everyone smile.
+Katrina,Nambinga,katrinanambinga@example.com,+264817568901,NamPost,Branch Manager,Ondangwa,Oshana,Namibia,Katrina runs a tight ship with a kind heart.
+Ling,Wang,lingwang@example.com,+86123456789,Beijing Electronics,Project Manager,Beijing,Beijing,China,Ling leads projects with precision and dedication.
+Magreth,Kashindi,magrethkashindi@example.com,+264817890123,FNB Namibia,Business Analyst,Oshakati,Oshana,Namibia,Magreth sees solutions where others see problems.
+Maria,Kambanda,mariakambanda@example.com,+264812134567,NamWater,Engineer,Lüderitz,Karas,Namibia,Maria is the engineer everyone relies on.
+Maria,Gonzalez,mariagonzalez@example.com,+34612345678,Banco Santander,Account Manager,Madrid,Madrid,Spain,Maria always has the answer to any financial question.
+Martha,Kashandola,marthakashandola@example.com,+264811789023,TransNamib,Operations Officer,Rehoboth,Hardap,Namibia,Martha keeps things moving like clockwork.
+Michael,Shikongo,michaelshikongo@example.com,+264811023456,Namdeb,Geologist,Oranjemund,Karas,Namibia,Michael is always discovering something new.
+Moses,Katanga,moseskatanga@example.com,+264816789012,TelecomNam,System Administrator,Windhoek,Khomas,Namibia,Always ready to take on new tech challenges.
+Nangula,Kashihakumwa,nangulakashihakumwa@example.com,+264818790123,AgriBank,Financial Consultant,Opuwo,Kunene,Namibia,Nangula has a way with numbers that impresses all.
+Ndina,Hainyeko,ndinahinayeko@example.com,+264813012456,Swakop Uranium,Safety Officer,Swakopmund,Erongo,Namibia,Ndina keeps everyone safe with her careful planning.
+Paulus,Shikomba,paulsshikomba@example.com,+264817689012,Meatco,Procurement Officer,Katima Mulilo,Zambezi,Namibia,Paulus knows how to find the best deals.
+Petrus,Nakale,petrusnakale@example.com,+264814567890,Agricorp,Field Officer,Walvis Bay,Erongo,Namibia,Petrus is a nature lover with a knack for farming.
+Rachel,Shipena,rachelshipena@example.com,+264819780123,Namibia Tourism Board,Marketing Officer,Swakopmund,Erongo,Namibia,Rachel puts Namibia on the map.
+Robert,Johnson,robertjohnson@example.com,+6123456789,TechSydney,IT Consultant,Sydney,New South Wales,Australia,Robert solves problems with a smile.
+Samuel,Tjijenda,samueltjijenda@example.com,+264814356789,NamPol,Police Officer,Gobabis,Omaheke,Namibia,Samuel keeps everyone safe with a friendly face.
+Sara,Nghipandulwa,saranghipandulwa@example.com,+264819012345,MTC,Marketing Manager,Windhoek,Khomas,Namibia,Sara can sell anything with a smile.
+Selma,Hamunyela,selmahamunyela@example.com,+264815678901,Old Mutual,Accountant,Swakopmund,Erongo,Namibia,Selma brings balance to everything she does.
+Selma,Amwele,selmaamwele@example.com,+264818567901,NamPower,Electrical Engineer,Karibib,Erongo,Namibia,Selma lights up the room with her energy.
+Simeon,Kambonde,simeonkambonde@example.com,+264812890134,NAU,Agricultural Consultant,Ongwediva,Oshana,Namibia,Simeon knows how to get the most out of the land.
+Tomas,Negumbo,tomasnegumbo@example.com,+264815467890,NamPower,Mechanical Engineer,Okahandja,Otjozondjupa,Namibia,Tomas is the engine behind every successful project.
+Victor,Namupala,victornamupala@example.com,+264819678012,Bank of Namibia,Risk Analyst,Windhoek,Khomas,Namibia,Victor always has the perfect plan for any challenge.
+Victoria,Nakanyete,victorianakanyete@example.com,+264815346789,De Beers,Geologist,Oranjemund,Karas,Namibia,Victoria always uncovers hidden gems.
+Wilhelmina,Haufiku,wilhelminahaufiku@example.com,+264812013456,Ministry of Health,Pharmacist,Oshikuku,Omusati,Namibia,Wilhelmina is precise and cares deeply for her patients.
