@@ -1,14 +1,18 @@
 import java.util.Scanner;
 
-import SearchModule.*;
+import SearchModule.SearchContact;
 import deleteContactModule.DeleteContact;
 import insertContactModule.InsertContact;
+import sortModule.MergeSortFile;
 import displayContactModule.DisplayContacts;
 
 public class Main {
     public static void main(String[] args) {
-        SearchContact search = new SearchContact();
-        InsertContact insert = new InsertContact();
+        MergeSortFile mergeSort = new MergeSortFile();
+        // sort the list before using it
+        
+        mergeSort.sortTheCsv();
+
         DisplayContacts display = new DisplayContacts();
         Scanner scanner = new Scanner(System.in);
         int choice;
