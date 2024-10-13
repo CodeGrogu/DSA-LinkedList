@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class searchContact {
+public class SearchContact {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
