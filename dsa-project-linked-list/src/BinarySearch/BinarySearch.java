@@ -74,50 +74,50 @@ public class BinarySearch {
 
     // Method to prompt user for updated contact details
     public static String[] promptForNewDetails(String[] contact) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Enter new details (press Enter to keep the current value):");
+            System.out.print("First Name (" + contact[0] + "): ");
+            String firstName = scanner.nextLine();
+            if (firstName.isEmpty()) firstName = contact[0];
 
-        System.out.println("Enter new details (press Enter to keep the current value):");
-        System.out.print("First Name (" + contact[0] + "): ");
-        String firstName = scanner.nextLine();
-        if (firstName.isEmpty()) firstName = contact[0];
+            System.out.print("Last Name (" + contact[1] + "): ");
+            String lastName = scanner.nextLine();
+            if (lastName.isEmpty()) lastName = contact[1];
 
-        System.out.print("Last Name (" + contact[1] + "): ");
-        String lastName = scanner.nextLine();
-        if (lastName.isEmpty()) lastName = contact[1];
+            System.out.print("Email (" + contact[2] + "): ");
+            String email = scanner.nextLine();
+            if (email.isEmpty()) email = contact[2];
 
-        System.out.print("Email (" + contact[2] + "): ");
-        String email = scanner.nextLine();
-        if (email.isEmpty()) email = contact[2];
+            System.out.print("Phone Number (" + contact[3] + "): ");
+            String phoneNumber = scanner.nextLine();
+            if (phoneNumber.isEmpty()) phoneNumber = contact[3];
 
-        System.out.print("Phone Number (" + contact[3] + "): ");
-        String phoneNumber = scanner.nextLine();
-        if (phoneNumber.isEmpty()) phoneNumber = contact[3];
+            System.out.print("Company (" + contact[4] + "): ");
+            String company = scanner.nextLine();
+            if (company.isEmpty()) company = contact[4];
 
-        System.out.print("Company (" + contact[4] + "): ");
-        String company = scanner.nextLine();
-        if (company.isEmpty()) company = contact[4];
+            System.out.print("Job Title (" + contact[5] + "): ");
+            String jobTitle = scanner.nextLine();
+            if (jobTitle.isEmpty()) jobTitle = contact[5];
 
-        System.out.print("Job Title (" + contact[5] + "): ");
-        String jobTitle = scanner.nextLine();
-        if (jobTitle.isEmpty()) jobTitle = contact[5];
+            System.out.print("City (" + contact[6] + "): ");
+            String city = scanner.nextLine();
+            if (city.isEmpty()) city = contact[6];
 
-        System.out.print("City (" + contact[6] + "): ");
-        String city = scanner.nextLine();
-        if (city.isEmpty()) city = contact[6];
+            System.out.print("Region (" + contact[7] + "): ");
+            String region = scanner.nextLine();
+            if (region.isEmpty()) region = contact[7];
 
-        System.out.print("Region (" + contact[7] + "): ");
-        String region = scanner.nextLine();
-        if (region.isEmpty()) region = contact[7];
+            System.out.print("Country (" + contact[8] + "): ");
+            String country = scanner.nextLine();
+            if (country.isEmpty()) country = contact[8];
 
-        System.out.print("Country (" + contact[8] + "): ");
-        String country = scanner.nextLine();
-        if (country.isEmpty()) country = contact[8];
+            System.out.print("Notes (" + contact[9] + "): ");
+            String notes = scanner.nextLine();
+            if (notes.isEmpty()) notes = contact[9];
 
-        System.out.print("Notes (" + contact[9] + "): ");
-        String notes = scanner.nextLine();
-        if (notes.isEmpty()) notes = contact[9];
-
-        return new String[] { firstName, lastName, email, phoneNumber, company, jobTitle, city, region, country, notes };
+            return new String[] { firstName, lastName, email, phoneNumber, company, jobTitle, city, region, country, notes };
+        }
     }
 
     // Save the updated contacts list back to the CSV file

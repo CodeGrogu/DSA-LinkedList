@@ -1,4 +1,4 @@
-//package insertContactModule;
+package insertContactModule;
 // Contact.java
 public class Contact {
     private String phoneNumber;

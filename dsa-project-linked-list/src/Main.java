@@ -1,19 +1,21 @@
+import BinarySearch.BinarySearch;
 import java.util.Scanner;
 
-import BinarySearch.BinarySearch;
-import SearchModule.SearchContact;
 import deleteContactModule.DeleteContact;
 import sortModule.MergeSortFile;
+
+import updateModule.UpdateContact;
+
 import displayContactModule.DisplayContacts;
+
+import SearchModule.SearchContact;
+import insertContactModule.InsertContact;
 
 public class Main {
     public static void main(String[] args) {
-        MergeSortFile mergeSort = new MergeSortFile();
-        // sort the list before using it
-        
-        mergeSort.sortTheCsv();
 
-        DisplayContacts display = new DisplayContacts();
+        MergeSortFile.sortTheCsv();
+
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -32,7 +34,7 @@ public class Main {
                     deleteContact(scanner);
                     break;
                 case 4:
-                    display.displayContacts();
+                    DisplayContacts.displayContacts();
                     break;
                 case 5:
                 System.out.print("Enter first name: ");
@@ -41,6 +43,7 @@ public class Main {
                 String lastName = scanner.nextLine();
                 BinarySearch.searchAndUpdate("John", "Doe");
                 break;
+
                 case 6:
                     System.out.println("Exiting...");
                     break;
@@ -84,7 +87,7 @@ public class Main {
         String phoneNumber = scanner.nextLine();
         System.out.print("Enter Email: ");
         String email = scanner.nextLine();
-        insertContactModule.insertContact(firstName, lastName, phoneNumber, email);
+        InsertContactModule.insertContact(firstName, lastName, phoneNumber, email);
 
     }
     
@@ -98,7 +101,7 @@ public class Main {
         
 }
 
-private static void updateContact(Scanner scanner) {
+private static void UpdateContact(Scanner scanner) {
     System.out.print("Enter first name: ");
     String firstName = scanner.nextLine();
     System.out.print("Enter last name: ");
