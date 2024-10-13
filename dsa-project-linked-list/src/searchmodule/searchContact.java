@@ -22,11 +22,12 @@ public class SearchContact {
                 // Assuming the first name is in the first column and last name in the second
                 String contactFirstName = row[0]; 
                 String contactLastName = row[1]; 
-                
+                String contactPhoneNumber = row[2];
+                String contactEmail = row[3];
                 // Check if both first and last names match
                 if (contactFirstName.equalsIgnoreCase(firstName) && contactLastName.equalsIgnoreCase(lastName)) { 
                     System.out.println("Contact found: ");
-                    System.out.println("Name: " + contactFirstName + " " + contactLastName);
+                    System.out.println("Name: " + contactFirstName + " " + contactLastName + " " + contactPhoneNumber + " " + contactEmail);
                     for (int i = 2; i < row.length; i++) { // Start printing from the third column
                         System.out.print(row[i] + " "); 
                     }
