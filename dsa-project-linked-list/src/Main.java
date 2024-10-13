@@ -5,12 +5,12 @@ import deleteContactModule.DeleteContact;
 import insertContactModule.InsertContact;
 import sortModule.MergeSortFile;
 import displayContactModule.DisplayContacts;
+import updateModule.updateContact;
 
 public class Main {
     public static void main(String[] args) {
         MergeSortFile mergeSort = new MergeSortFile();
         // sort the list before using it
-        SearchContact searchContact = new SearchContact();
         
         mergeSort.sortTheCsv();
 
@@ -27,8 +27,8 @@ public class Main {
                     insertContact(scanner);
                     break;
                 case 2:
-                SearchContact.searchContact();
-                break;
+                    searchContact(scanner);
+                    break;
                 case 3:
                     deleteContact(scanner);
                     break;
@@ -86,9 +86,9 @@ public class Main {
     
 
     private static void searchContact(Scanner scanner) {
-        System.out.print("Enter first name: ");
+        System.out.print("Enter first name of the contact you want to search for: ");
         String firstName = scanner.nextLine();
-        System.out.print("Enter last name: ");
+        System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scanner.nextLine();
         SearchContact.searchContact(firstName, lastName);
 }
