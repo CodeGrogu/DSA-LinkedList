@@ -5,8 +5,7 @@ import java.io.IOException;
 import deleteContactModule.DeleteContact;
 import sortModule.MergeSortFile;
 
-import BinarySearch.updateContact;
-import searchModule.searchContact;
+import updateModule.UpdateContact;
 
 import displayContactModule.DisplayContacts;
 import SearchModule.SearchContact;
@@ -19,21 +18,14 @@ public class Main {
         ensureFileExists("dsa-project-linked-list\\src\\data\\contacts.csv");
 
         MergeSortFile.sortTheCsv();
-        
-        Scanner scanner = new Scanner(System.in);
 
-        while (true) {
-            System.out.println("Phonebook Menu:");
-            System.out.println("1. Insert Contact");
-            System.out.println("2. Search Contact");
-            System.out.println("3. Delete Contact");
-            System.out.println("4. Display All Contacts");
-            System.out.println("5. Update Contact");
-            System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
-            
-            int choice = getUserChoice(scanner);
-            
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+
+        do {
+            displayMenu();
+            choice = getUserChoice(scanner);
+
             switch (choice) {
                 case 1:
                     insertContact(scanner);
@@ -48,8 +40,13 @@ public class Main {
                     DisplayContacts.displayContacts(null, scanner);
                     break;
                 case 5:
-                    updateContact(scanner);
-                    break;
+                System.out.print("Enter first name: ");
+                String firstName = scanner.nextLine();
+                System.out.print("Enter last name: ");
+                String lastName = scanner.nextLine();
+                BinarySearch.searchAndUpdate("John", "Doe");
+                break;
+
                 case 6:
                     System.out.println("Exiting...");
                     scanner.close();
@@ -57,19 +54,20 @@ public class Main {
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-        }
+        } while (choice != 5);
+
+        scanner.close();
     }
 
-    private static void ensureFileExists(String filePath) {
-        File file = new File(filePath);
-        if (!file.exists()) {
-            try {
-                file.getParentFile().mkdirs();
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+    private static void displayMenu() {
+        System.out.println("\nPhonebook Menu:");
+        System.out.println("1. Insert Contact");
+        System.out.println("2. Search Contact");
+        System.out.println("3. Delete Contact");
+        System.out.println("4. Display All Contacts");
+        System.out.println("5. Update Contact");
+        System.out.println("6. Exit");
+        System.out.print("Enter your choice: ");
     }
 
 
@@ -120,16 +118,10 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scanner.nextLine();
-        searchContact.findContact(firstName, lastName);
-    }
+        SearchContact.searchContact(firstName, lastName);      
+}
 
-    private static void updateContact(Scanner scanner) {
-        System.out.print("Enter first name: ");
-        String firstName = scanner.nextLine();
-        System.out.print("Enter last name: ");
-        String lastName = scanner.nextLine();
-        updateContact.searchAndUpdate(firstName, lastName);
-    }
+
 
     private static void deleteContact(Scanner scanner) {
         System.out.print("Enter first name: ");
