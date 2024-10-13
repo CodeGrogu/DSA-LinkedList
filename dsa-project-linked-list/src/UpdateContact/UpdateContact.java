@@ -1,4 +1,4 @@
-package updateModule;
+package UpdateContact;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -75,7 +75,6 @@ public class UpdateContact {
     // Method to prompt user for updated contact details
     public static String[] promptForNewDetails(String[] contact) {
         try (Scanner scanner = new Scanner(System.in)) {
-
             System.out.println("Enter new details (press Enter to keep the current value):");
             System.out.print("First Name (" + contact[0] + "): ");
             String firstName = scanner.nextLine();
@@ -165,8 +164,8 @@ public class UpdateContact {
         }
     }
 
-    public static void main(String[] args) {
-        // Example usage
-        searchAndUpdate("John", "Doe");
-    }
+    // public static void main(String[] args) {
+    //     // Example usage
+    //     searchAndUpdate("John", "Doe");
+    // }
 }

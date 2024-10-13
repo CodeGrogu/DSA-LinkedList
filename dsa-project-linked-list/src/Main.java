@@ -1,12 +1,11 @@
-import BinarySearch.BinarySearch;
 import java.util.Scanner;
 
 import deleteContactModule.DeleteContact;
 import sortModule.MergeSortFile;
 
-import updateModule.UpdateContact;
+import UpdateModule.UpdateContact;
 import SearchModule.SearchContact;
-
+import UpdateContact.UpdateContact;
 import displayContactModule.DisplayContacts;
 import insertContactModule.InsertContact;
 
@@ -41,7 +40,7 @@ public class Main {
                     String firstName = scanner.nextLine();
                     System.out.print("Enter last name: ");
                     String lastName = scanner.nextLine();
-                    BinarySearch.searchAndUpdate(firstName, lastName);
+                    UpdateContact.searchAndUpdate(firstName, lastName);
                     break;
                 case 6:
                     System.out.println("Exiting...");
