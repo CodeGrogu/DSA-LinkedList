@@ -164,8 +164,8 @@ public class BinarySearch {
         }
     }
 
-    public static void main(String[] args) {
-        // Example usage
-        searchAndUpdate("John", "Doe");
-    }
+    // public static void main(String[] args) {
+    //     // Example usage
+    //     searchAndUpdate("John", "Doe");
+    // }
 }

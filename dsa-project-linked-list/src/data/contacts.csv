@@ -1,4 +1,3 @@
-Abraham,Namaseb,abrahamnamaseb@example.com,+264811902345,TransNamib,Train Operator,Tsumeb,Oshikoto,Namibia,Abraham keeps the wheels turning in the right direction.
 Adolf,Hamukwaya,adolfhamukwaya@example.com,+264812901345,O&L Group,Logistics Coordinator,Windhoek,Khomas,Namibia,Adolf never lets a delivery arrive late.
 Anna,Shilongo,annashilongo@example.com,+264812345678,HealthNam,Medical Practitioner,Ondangwa,Oshana,Namibia,Anna is always there when you need her.
 Anna,Smith,annasmith@example.com,+447701234567,UKHealth,Doctor,London,England,United Kingdom,Anna brings care and compassion to every patient.
@@ -13,8 +12,8 @@ Hilma,Nandjebo,hilmanandjebo@example.com,+264815234678,Private,Freelancer,Windho
 Iyaloo,Shilunga,iyalooshilunga@example.com,+264811890234,Erongo Marine,Operations Manager,Walvis Bay,Erongo,Namibia,Iyaloo keeps the team moving forward smoothly.
 Johanna,Iiyambo,johannaiiyambo@example.com,+264819801234,Gondwana,Guest Relations Manager,Windhoek,Khomas,Namibia,Johanna makes every guest feel like family.
 Johannes,Amupolo,johannesamupolo@example.com,+264811234567,TechNam,Software Engineer,Windhoek,Khomas,Namibia,Always the first to solve problems.
-John,Shikongo,johnshikongo@example.com,+264818679012,Air Namibia,Pilot,Windhoek,Khomas,Namibia,John takes everyone to new heights.
 John,Doe,johndoe@example.com,+19801234567,Tech Corp,Software Developer,New York,New York,USA,John is always coding the next big thing.
+John,Shikongo,johnshikongo@example.com,+264818679012,Air Namibia,Pilot,Windhoek,Khomas,Namibia,John takes everyone to new heights.
 Jonas,Haitota,jonashaitota@example.com,+264814123567,B2Gold Namibia,Mining Engineer,Otavi,Otjozondjupa,Namibia,Jonas digs deep to find the best solutions.
 Joseph,Kambonde,josephkambonde@example.com,+264818901234,Nedbank Namibia,Loan Officer,Keetmanshoop,Karas,Namibia,Joseph is calm under pressure and delivers every time.
 Julius,Nakale,juliusnakale@example.com,+264816345789,GIPF,Financial Advisor,Mariental,Hardap,Namibia,Julius makes complicated things easy to understand.
@@ -22,8 +21,8 @@ Justine,Nambahu,justinenambahu@example.com,+264814235678,MTC,Customer Service Re
 Katrina,Nambinga,katrinanambinga@example.com,+264817568901,NamPost,Branch Manager,Ondangwa,Oshana,Namibia,Katrina runs a tight ship with a kind heart.
 Ling,Wang,lingwang@example.com,+86123456789,Beijing Electronics,Project Manager,Beijing,Beijing,China,Ling leads projects with precision and dedication.
 Magreth,Kashindi,magrethkashindi@example.com,+264817890123,FNB Namibia,Business Analyst,Oshakati,Oshana,Namibia,Magreth sees solutions where others see problems.
-Maria,Kambanda,mariakambanda@example.com,+264812134567,NamWater,Engineer,Lüderitz,Karas,Namibia,Maria is the engineer everyone relies on.
 Maria,Gonzalez,mariagonzalez@example.com,+34612345678,Banco Santander,Account Manager,Madrid,Madrid,Spain,Maria always has the answer to any financial question.
+Maria,Kambanda,mariakambanda@example.com,+264812134567,NamWater,Engineer,Lüderitz,Karas,Namibia,Maria is the engineer everyone relies on.
 Martha,Kashandola,marthakashandola@example.com,+264811789023,TransNamib,Operations Officer,Rehoboth,Hardap,Namibia,Martha keeps things moving like clockwork.
 Michael,Shikongo,michaelshikongo@example.com,+264811023456,Namdeb,Geologist,Oranjemund,Karas,Namibia,Michael is always discovering something new.
 Moses,Katanga,moseskatanga@example.com,+264816789012,TelecomNam,System Administrator,Windhoek,Khomas,Namibia,Always ready to take on new tech challenges.
@@ -35,10 +34,13 @@ Rachel,Shipena,rachelshipena@example.com,+264819780123,Namibia Tourism Board,Mar
 Robert,Johnson,robertjohnson@example.com,+6123456789,TechSydney,IT Consultant,Sydney,New South Wales,Australia,Robert solves problems with a smile.
 Samuel,Tjijenda,samueltjijenda@example.com,+264814356789,NamPol,Police Officer,Gobabis,Omaheke,Namibia,Samuel keeps everyone safe with a friendly face.
 Sara,Nghipandulwa,saranghipandulwa@example.com,+264819012345,MTC,Marketing Manager,Windhoek,Khomas,Namibia,Sara can sell anything with a smile.
-Selma,Hamunyela,selmahamunyela@example.com,+264815678901,Old Mutual,Accountant,Swakopmund,Erongo,Namibia,Selma brings balance to everything she does.
 Selma,Amwele,selmaamwele@example.com,+264818567901,NamPower,Electrical Engineer,Karibib,Erongo,Namibia,Selma lights up the room with her energy.
+Selma,Hamunyela,selmahamunyela@example.com,+264815678901,Old Mutual,Accountant,Swakopmund,Erongo,Namibia,Selma brings balance to everything she does.
 Simeon,Kambonde,simeonkambonde@example.com,+264812890134,NAU,Agricultural Consultant,Ongwediva,Oshana,Namibia,Simeon knows how to get the most out of the land.
 Tomas,Negumbo,tomasnegumbo@example.com,+264815467890,NamPower,Mechanical Engineer,Okahandja,Otjozondjupa,Namibia,Tomas is the engine behind every successful project.
 Victor,Namupala,victornamupala@example.com,+264819678012,Bank of Namibia,Risk Analyst,Windhoek,Khomas,Namibia,Victor always has the perfect plan for any challenge.
 Victoria,Nakanyete,victorianakanyete@example.com,+264815346789,De Beers,Geologist,Oranjemund,Karas,Namibia,Victoria always uncovers hidden gems.
 Wilhelmina,Haufiku,wilhelminahaufiku@example.com,+264812013456,Ministry of Health,Pharmacist,Oshikuku,Omusati,Namibia,Wilhelmina is precise and cares deeply for her patients.
+a lights up the room with her energy.
+firstName,lastName,email,phoneNumber,company,jobTitle,city,region,country,notes
+uku,Omusati,Namibia,Wilhelmina is precise and cares deeply for her patients.
