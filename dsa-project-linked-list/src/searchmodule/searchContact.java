@@ -3,12 +3,12 @@ package SearchModule;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.Scanner;
 
-public class SearchContact {
+public class searchContact {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -24,11 +24,11 @@ public class SearchContact {
     }
 
     public static void searchContact(String firstName, String lastName) {
-        String file = "src\\src\\data\\contacts.csv"; // Path to your contacts CSV file
+        String file = "src\\data\\contacts.csv"; // Path to your contacts CSV file
         BufferedReader reader = null;  // Initialize BufferedReader
         String line; // Read each line of the file 
 
-        LinkedList<String[]> contacts = new LinkedList<>(); // List to store contacts
+        ArrayList<String[]> contacts = new ArrayList<>(); // List to store contacts
 
         try {
             reader = new BufferedReader(new FileReader(file));
@@ -76,7 +76,7 @@ public class SearchContact {
         }
     }
 
-    private static int binarySearch(LinkedList<String[]> contacts, String firstName, String lastName) {
+    private static int binarySearch(ArrayList<String[]> contacts, String firstName, String lastName) {
         int low = 0;
         int high = contacts.size() - 1;
 
@@ -105,6 +105,4 @@ public class SearchContact {
         }
         return firstNameComparison;
     }
-
-   
 }
