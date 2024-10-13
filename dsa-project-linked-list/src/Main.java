@@ -43,7 +43,7 @@ public class Main {
                     deleteContact(scanner);
                     break;
                 case 4:
-                    DisplayContacts.displayContacts();
+                    DisplayContacts.displayContacts(null, scanner);
                     break;
                 case 5:
                     updateContact(scanner);
@@ -96,7 +96,19 @@ public class Main {
         String phoneNumber = scanner.nextLine();
         System.out.print("Enter Email: ");
         String email = scanner.nextLine();
-        InsertContact.addContact(firstName, lastName, phoneNumber, email, email, email, email, email, email, email);
+        System.out.print("Enter company: ");
+        String company = scanner.nextLine();
+        System.out.print("Enter job title: ");
+        String jobTitle = scanner.nextLine();
+        System.out.print("Enter city: ");
+        String city = scanner.nextLine();
+        System.out.print("Enter region: ");
+        String region = scanner.nextLine();
+        System.out.print("Enter country: ");
+        String country = scanner.nextLine();
+        System.out.print("Enter notes: ");
+        String notes = scanner.nextLine();
+        InsertContact.addContact(firstName,lastName,email,phoneNumber,company,jobTitle,city,region,country,notes);
     }
 
     private static void searchContact(Scanner scanner) {
