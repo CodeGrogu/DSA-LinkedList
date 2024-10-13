@@ -8,8 +8,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class SearchContact {
-    public static void main(String[] args) {
+public class searchContact {
+    public static void searchContact() {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter first name of the contact you want to search for: ");
@@ -24,7 +24,7 @@ public class SearchContact {
     }
 
     public static void searchContact(String firstName, String lastName) {
-        String file = "src\\data\\contacts.csv"; // Path to your contacts CSV file
+        String file = "dsa-project-linked-list\\src\\data\\contacts.csv"; // Path to your contacts CSV file
         BufferedReader reader = null;  // Initialize BufferedReader
         String line; // Read each line of the file 
 
@@ -105,4 +105,5 @@ public class SearchContact {
         }
         return firstNameComparison;
     }
+
 }
