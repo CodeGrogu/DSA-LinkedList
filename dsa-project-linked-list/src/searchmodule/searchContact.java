@@ -9,7 +9,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class searchContact {
-    public static void main(String[] args) {
+    public static void searchContact() {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter first name of the contact you want to search for: ");
@@ -105,4 +105,5 @@ public class searchContact {
         }
         return firstNameComparison;
     }
+
 }

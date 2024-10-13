@@ -2,7 +2,8 @@ package sortModule;
 
 import java.io.*;
 import java.util.*;
-
+// This method will sort the contacts in the CSV file based on the first name, using the Merge Sort algorithm.
+// method is called everytime the program starts up, so that the contacts are always sorted.
 public class MergeSortFile {
     public static void sortTheCsv() {
         String inputFilePath = "src\\data\\contacts.csv";

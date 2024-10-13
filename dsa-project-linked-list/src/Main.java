@@ -5,6 +5,7 @@ import deleteContactModule.DeleteContact;
 import insertContactModule.InsertContact;
 import sortModule.MergeSortFile;
 import displayContactModule.DisplayContacts;
+import updateModule.updateContact;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,6 +36,9 @@ public class Main {
                     display.displayContacts();
                     break;
                 case 5:
+                    updateContact(scanner);
+                    break;
+                case 6:
                     System.out.println("Exiting...");
                     break;
                 default:
@@ -54,6 +58,7 @@ public class Main {
         System.out.println("5. Exit");
         System.out.print("Enter your choice: ");
     }
+
 
     private static int getUserChoice(Scanner scanner) {
         while (!scanner.hasNextInt()) {
@@ -81,11 +86,19 @@ public class Main {
     
 
     private static void searchContact(Scanner scanner) {
-        System.out.print("Enter first name: ");
+        System.out.print("Enter first name of the contact you want to search for: ");
         String firstName = scanner.nextLine();
-        System.out.print("Enter last name: ");
+        System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scanner.nextLine();
         SearchContact.searchContact(firstName, lastName);
+}
+
+private static void updateContact(Scanner scanner) {
+    System.out.print("Enter first name: ");
+    String firstName = scanner.nextLine();
+    System.out.print("Enter last name: ");
+    String lastName = scanner.nextLine();
+    SearchContact.searchContact(firstName, lastName);
 }
 
     private static void deleteContact(Scanner scanner) {
