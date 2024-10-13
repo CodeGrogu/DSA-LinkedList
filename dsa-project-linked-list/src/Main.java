@@ -1,8 +1,15 @@
 import java.util.Scanner;
 
+import SearchModule.*;
+import deleteContactModule.DeleteContact;
+import insertContactModule.InsertContact;
+import displayContactModule.DisplayContacts;
+
 public class Main {
     public static void main(String[] args) {
-        PhoneBook phonebook = new PhoneBook();
+        SearchContact search = new SearchContact();
+        InsertContact insert = new InsertContact();
+        DisplayContacts display = new DisplayContacts();
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -12,16 +19,16 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    insertContact(scanner, phonebook);
+                    insertContact(scanner);
                     break;
                 case 2:
-                    searchContact(scanner, phonebook);
+                    searchContact(scanner);
                     break;
                 case 3:
-                    deleteContact(scanner, phonebook);
+                    deleteContact(scanner);
                     break;
                 case 4:
-                    phonebook.displayContacts();
+                    display.displayContacts();
                     break;
                 case 5:
                     System.out.println("Exiting...");
@@ -55,30 +62,33 @@ public class Main {
         return choice;
     }
 
-    private static void insertContact(Scanner scanner, PhoneBook phonebook) {
+    private static void insertContact(Scanner scanner) {
         System.out.print("Enter first name: ");
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
         System.out.print("Enter phone number: ");
         String phoneNumber = scanner.nextLine();
-        PhoneBook.insertContact(firstName, lastName, phoneNumber);
+        System.out.print("Enter Email: ");
+        String email = scanner.nextLine();
+        InsertContact.insertContact(firstName, lastName, phoneNumber, email);
 
     }
     
 
-    private static void searchContact(Scanner scanner, PhoneBook phonebook) {
+    private static void searchContact(Scanner scanner) {
         System.out.print("Enter first name: ");
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
-        phonebook.searchContact(firstName, lastName);
+        SearchContact.searchContact(firstName, lastName);
 }
 
-    private static void deleteContact(Scanner scanner, PhoneBook phonebook) {
+    private static void deleteContact(Scanner scanner) {
         System.out.print("Enter first name: ");
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
+        DeleteContact.deleteContact(firstName, lastName);
     }
 }

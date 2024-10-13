@@ -3,22 +3,14 @@ package SearchModule;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
+
 
 public class SearchContact {
-    public static void main(String[] args) {
+    public static void searchContact(String firstName, String lastName) {
        
         String file = "src\\data\\contacts.csv"; // Path to your contacts CSV file
         BufferedReader reader = null;  // Initialize BufferedReader
         String line; // Read each line of the file 
-        Scanner scan = new Scanner(System.in);
-        String firstName, lastName;
-
-        // Prompt user for first name and last name
-        System.out.println("Enter the First name of the contact you want to search: ");
-        firstName = scan.nextLine(); 
-        System.out.println("Enter the Last name of the contact you want to search: ");
-        lastName = scan.nextLine(); 
 
         boolean contactFound = false; 
         
@@ -60,6 +52,5 @@ public class SearchContact {
             System.out.println("Contact not found.");
         }
 
-        scan.close(); // Close the scanner
     }
 }
