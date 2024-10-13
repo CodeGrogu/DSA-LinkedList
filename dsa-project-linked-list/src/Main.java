@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         MergeSortFile mergeSort = new MergeSortFile();
         // sort the list before using it
+        SearchContact searchContact = new SearchContact();
         
         mergeSort.sortTheCsv();
 
@@ -26,8 +27,8 @@ public class Main {
                     insertContact(scanner);
                     break;
                 case 2:
-                    searchContact(scanner);
-                    break;
+                SearchContact.searchContact();
+                break;
                 case 3:
                     deleteContact(scanner);
                     break;
@@ -35,6 +36,9 @@ public class Main {
                     display.displayContacts();
                     break;
                 case 5:
+                    updateContact(scanner);
+                    break;
+                case 6:
                     System.out.println("Exiting...");
                     break;
                 default:
@@ -54,6 +58,7 @@ public class Main {
         System.out.println("5. Exit");
         System.out.print("Enter your choice: ");
     }
+
 
     private static int getUserChoice(Scanner scanner) {
         while (!scanner.hasNextInt()) {
@@ -86,6 +91,14 @@ public class Main {
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
         SearchContact.searchContact(firstName, lastName);
+}
+
+private static void updateContact(Scanner scanner) {
+    System.out.print("Enter first name: ");
+    String firstName = scanner.nextLine();
+    System.out.print("Enter last name: ");
+    String lastName = scanner.nextLine();
+    SearchContact.searchContact(firstName, lastName);
 }
 
     private static void deleteContact(Scanner scanner) {
