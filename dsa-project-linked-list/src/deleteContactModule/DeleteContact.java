@@ -2,11 +2,8 @@ package deleteContactModule;
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
-
-//import BinarySearch.*;
-
-import java.util.*;
-//import java.io.IOException;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class DeleteContact {
     public static void deleteContact(String firstName, String lastName) {
@@ -18,24 +15,24 @@ public class DeleteContact {
             String response = scanner.nextLine();
 
             if (response.equalsIgnoreCase("yes")) {
-                Iterator<String[]> iterator = contacts.iterator();
-                boolean contactFound = false;
+                // Sort contacts
+                contacts.sort(Comparator.comparing((String[] contact) -> contact[0])
+                                        .thenComparing(contact -> contact[1]));
 
-                while (iterator.hasNext()) {
-                    String[] contact = iterator.next();
-                    if (contact[0].equals(firstName) && contact[1].equals(lastName)) {
-                        iterator.remove();
-                        contactFound = true;
-                        System.out.println("Contact deleted successfully.");
-                        break;
-                    }
-                }
+                // Create a key for binary search
+                String[] key = {firstName, lastName};
 
-                if (!contactFound) {
-                    System.out.println("Contact not found.");
-                } else {
+                // Perform binary search
+                int index = Arrays.binarySearch(contacts.toArray(new String[0][0]), key, Comparator.comparing((String[] contact) -> contact[0])
+                                                                                                    .thenComparing(contact -> contact[1]));
+
+                if (index >= 0) {
+                    contacts.remove(index);
+                    System.out.println("Contact deleted successfully.");
                     // Save updated contacts back to CSV file
-                    CSVUtils.writeCSV("data\\contacts.csv", contacts);
+                    CSVUtils.writeCSV("dsa-project-linked-list\\src\\data\\contacts.csv", contacts);
+                } else {
+                    System.out.println("Contact not found.");
                 }
             } else {
                 System.out.println("Deletion cancelled.");

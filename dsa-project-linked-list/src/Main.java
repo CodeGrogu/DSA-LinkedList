@@ -1,10 +1,11 @@
-// import BinarySearch.BinarySearch;
 import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
 
 import deleteContactModule.DeleteContact;
 import sortModule.MergeSortFile;
 
-import updateModule.UpdateContact;
+import BinarySearch.updateContact;
 import searchModule.searchContact;
 
 import displayContactModule.DisplayContacts;
@@ -12,16 +13,25 @@ import insertContactModule.InsertContact;
 
 public class Main {
     public static void main(String[] args) {
+        // Ensure the file exists
+        ensureFileExists("dsa-project-linked-list\\src\\data\\contacts.csv");
 
         MergeSortFile.sortTheCsv();
         
         Scanner scanner = new Scanner(System.in);
-        int choice;
 
-        displayMenu();
-        choice = getUserChoice(scanner);
-
-        do {
+        while (true) {
+            System.out.println("Phonebook Menu:");
+            System.out.println("1. Insert Contact");
+            System.out.println("2. Search Contact");
+            System.out.println("3. Delete Contact");
+            System.out.println("4. Display All Contacts");
+            System.out.println("5. Update Contact");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
+            
+            int choice = getUserChoice(scanner);
+            
             switch (choice) {
                 case 1:
                     insertContact(scanner);
@@ -40,36 +50,40 @@ public class Main {
                     break;
                 case 6:
                     System.out.println("Exiting...");
-                    break;
+                    scanner.close();
+                    return;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-            displayMenu();
-            choice = getUserChoice(scanner);
-        } while (choice != 6);
-
-        scanner.close();
+        }
     }
 
-    private static void displayMenu() {
-        System.out.println("\nPhonebook Menu:");
-        System.out.println("1. Insert Contact");
-        System.out.println("2. Search Contact");
-        System.out.println("3. Delete Contact");
-        System.out.println("4. Display All Contacts");
-        System.out.println("5. Update Contact");
-        System.out.println("6. Exit");
-        System.out.print("Enter your choice: ");
+    private static void ensureFileExists(String filePath) {
+        File file = new File(filePath);
+        if (!file.exists()) {
+            try {
+                file.getParentFile().mkdirs();
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private static int getUserChoice(Scanner scanner) {
-        while (!scanner.hasNextInt()) {
-            System.out.println("Invalid input. Please enter a number between 1 and 6.");
-            scanner.next(); // Consume invalid input
-            System.out.print("Enter your choice: ");
+        int choice = -1;
+        while (true) {
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+                if (choice >= 1 && choice <= 6) {
+                    break;
+                } else {
+                    System.out.println("Invalid input. Please enter a number between 1 and 6.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number between 1 and 6.");
+            }
         }
-        int choice = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
         return choice;
     }
 
@@ -82,7 +96,7 @@ public class Main {
         String phoneNumber = scanner.nextLine();
         System.out.print("Enter Email: ");
         String email = scanner.nextLine();
-        InsertContact.addContact(firstName, lastName, phoneNumber, email);
+        InsertContact.addContact(firstName, lastName, phoneNumber, email, email, email, email, email, email, email);
     }
 
     private static void searchContact(Scanner scanner) {
@@ -98,7 +112,7 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
-        UpdateContact.updateContact(firstName, lastName);
+        updateContact.searchAndUpdate(firstName, lastName);
     }
 
     private static void deleteContact(Scanner scanner) {

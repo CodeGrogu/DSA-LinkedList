@@ -23,7 +23,7 @@ public class searchContact {
     }
 
     public static void findContact(String firstName, String lastName) {
-        String file = "src\\data\\contacts.csv"; // Path to your contacts CSV file
+        String file = "dsa-project-linked-list\\src\\data\\contacts.csv"; // Path to your contacts CSV file
         BufferedReader reader = null;  // Initialize BufferedReader
         String line; // Read each line of the file 
 
@@ -105,4 +105,37 @@ public class searchContact {
         return firstNameComparison;
     }
 
+    public static void findContact(String firstName) {
+        String file = "dsa-project-linked-list\\src\\data\\contacts.csv"; // Path to your contacts CSV file
+        BufferedReader reader = null;  // Initialize BufferedReader
+        String line; // Read each line of the file 
+
+        ArrayList<String[]> contacts = new ArrayList<>(); // List to store contacts
+
+        try {
+            reader = new BufferedReader(new FileReader(file));
+            reader.readLine(); // Skip the header line
+            while ((line = reader.readLine()) != null) {
+                String[] row = line.split(","); // Split the line by commas
+                if (row[0].toLowerCase().contains(firstName.toLowerCase())) { // Check for partial match in first name
+                    contacts.add(row); // Add matching row to the contacts list
+                }
+            }
+        } catch (IOException e) { // Handle file reading errors
+            e.printStackTrace();
+        } finally {
+            try {
+                if (reader != null) {
+                    reader.close(); // Close the BufferedReader
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        // Display the matching contacts
+        for (String[] contact : contacts) {
+            System.out.println(String.join(", ", contact));
+        }
+    }
 }

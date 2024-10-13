@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-public class BinarySearch {
+public class updateContact {
 
     // Load contacts from the CSV file
     public static List<String[]> loadContacts(String filePath) throws IOException {
@@ -125,8 +125,6 @@ public class BinarySearch {
         BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));
         // Write header
         bw.write("firstName,lastName,email,phoneNumber,company,jobTitle,city,region,country,notes\n");
-        
-        // Write each contact back to the file
         for (String[] contact : contacts) {
             bw.write(String.join(",", contact) + "\n");
         }
@@ -137,7 +135,7 @@ public class BinarySearch {
     public static void searchAndUpdate(String firstName, String lastName) {
         try {
             // Load contacts from CSV
-            List<String[]> contacts = loadContacts("src/data/contacts.csv");
+            List<String[]> contacts = loadContacts("data\\contacts.csv");
 
             // Sort contacts before performing binary search
             sortContacts(contacts);
@@ -154,7 +152,7 @@ public class BinarySearch {
                 contacts.set(resultIndex, updatedContact);
 
                 // Save the updated contacts list back to the CSV
-                saveContacts("src/data/contacts.csv", contacts);
+                saveContacts("data\\contacts.csv", contacts);
                 System.out.println("Contact updated successfully.");
             } else {
                 System.out.println("Contact not found.");
