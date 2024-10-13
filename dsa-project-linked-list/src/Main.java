@@ -1,15 +1,17 @@
 import java.util.Scanner;
 
+import BinarySearch.BinarySearch;
 import SearchModule.SearchContact;
 import deleteContactModule.DeleteContact;
 import insertContactModule.InsertContact;
 import sortModule.MergeSortFile;
+// import updateModule.UpdateContact;
 import displayContactModule.DisplayContacts;
-import updateModule.updateContact;
 
 public class Main {
     public static void main(String[] args) {
         MergeSortFile mergeSort = new MergeSortFile();
+        // UpdateContact updateContact = new UpdateContact();
         // sort the list before using it
         
         mergeSort.sortTheCsv();
@@ -36,7 +38,7 @@ public class Main {
                     display.displayContacts();
                     break;
                 case 5:
-                    updateContact(scanner);
+                    //UpdateContact.searchAndUpdate("John", "Doe");
                     break;
                 case 6:
                     System.out.println("Exiting...");
