@@ -3,10 +3,10 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-import BinarySearch.*;
+//import BinarySearch.*;
 
 import java.util.*;
-import java.io.IOException;
+//import java.io.IOException;
 
 public class DeleteContact {
     public static void deleteContact(String firstName, String lastName) {

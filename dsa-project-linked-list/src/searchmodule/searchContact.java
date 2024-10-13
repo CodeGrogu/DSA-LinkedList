@@ -1,4 +1,4 @@
-package SearchModule;
+package searchModule;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class SearchContact {
-    public static void searchContact() {
+public class searchContact {
+    public static void searchForContact() {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter first name of the contact you want to search for: ");
@@ -17,12 +17,12 @@ public class SearchContact {
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scan.nextLine();
 
-        searchContact(firstName, lastName);
+        findContact(firstName, lastName);
         
         scan.close();
     }
 
-    public static void searchContact(String firstName, String lastName) {
+    public static void findContact(String firstName, String lastName) {
         String file = "src\\data\\contacts.csv"; // Path to your contacts CSV file
         BufferedReader reader = null;  // Initialize BufferedReader
         String line; // Read each line of the file 

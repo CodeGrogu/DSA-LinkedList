@@ -165,6 +165,11 @@ public class UpdateContact {
         }
     }
 
+    // Method to update a contact
+    public static void updateContact(String firstName, String lastName) {
+        searchAndUpdate(firstName, lastName);
+    }
+
     public static void main(String[] args) {
         // Example usage
         searchAndUpdate("John", "Doe");

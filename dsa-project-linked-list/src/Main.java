@@ -1,11 +1,11 @@
-import BinarySearch.BinarySearch;
+// import BinarySearch.BinarySearch;
 import java.util.Scanner;
 
 import deleteContactModule.DeleteContact;
 import sortModule.MergeSortFile;
 
 import updateModule.UpdateContact;
-import SearchModule.SearchContact;
+import searchModule.searchContact;
 
 import displayContactModule.DisplayContacts;
 import insertContactModule.InsertContact;
@@ -15,7 +15,6 @@ public class Main {
 
         MergeSortFile.sortTheCsv();
         
-
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -37,11 +36,7 @@ public class Main {
                     DisplayContacts.displayContacts();
                     break;
                 case 5:
-                    System.out.print("Enter first name: ");
-                    String firstName = scanner.nextLine();
-                    System.out.print("Enter last name: ");
-                    String lastName = scanner.nextLine();
-                    BinarySearch.searchAndUpdate(firstName, lastName);
+                    updateContact(scanner);
                     break;
                 case 6:
                     System.out.println("Exiting...");
@@ -88,8 +83,6 @@ public class Main {
         System.out.print("Enter Email: ");
         String email = scanner.nextLine();
         InsertContact.addContact(firstName, lastName, phoneNumber, email);
-
-
     }
 
     private static void searchContact(Scanner scanner) {
@@ -97,16 +90,15 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scanner.nextLine();
-        SearchContact.searchContact(firstName, lastName);
-}
+        searchContact.findContact(firstName, lastName);
+    }
 
-
-
-    private static void UpdateContact(Scanner scanner) {
+    private static void updateContact(Scanner scanner) {
         System.out.print("Enter first name: ");
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
+        UpdateContact.updateContact(firstName, lastName);
     }
 
     private static void deleteContact(Scanner scanner) {
@@ -114,5 +106,6 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
+        DeleteContact.deleteContact(firstName, lastName);
     }
 }
