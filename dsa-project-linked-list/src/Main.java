@@ -7,8 +7,8 @@ import sortModule.MergeSortFile;
 import updateModule.UpdateContact;
 
 import displayContactModule.DisplayContacts;
-
 import SearchModule.SearchContact;
+
 import insertContactModule.InsertContact;
 
 public class Main {
@@ -87,7 +87,8 @@ public class Main {
         String phoneNumber = scanner.nextLine();
         System.out.print("Enter Email: ");
         String email = scanner.nextLine();
-        InsertContactModule.insertContact(firstName, lastName, phoneNumber, email);
+        InsertContact.addContact(firstName, lastName, phoneNumber, email);
+
 
     }
     
@@ -97,23 +98,15 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scanner.nextLine();
-        SearchContact.searchContact(firstName, lastName);
-        
+        SearchContact.searchContact(firstName, lastName);      
 }
 
-private static void UpdateContact(Scanner scanner) {
-    System.out.print("Enter first name: ");
-    String firstName = scanner.nextLine();
-    System.out.print("Enter last name: ");
-    String lastName = scanner.nextLine();
-    SearchModule.searchContact.searchContact(firstName, lastName);
-}
+
 
     private static void deleteContact(Scanner scanner) {
         System.out.print("Enter first name: ");
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
-        DeleteContact.deleteContact(firstName, lastName);
     }
 }
