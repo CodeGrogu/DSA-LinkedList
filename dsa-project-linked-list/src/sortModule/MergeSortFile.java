@@ -1,10 +1,12 @@
+package sortModule;
+
 import java.io.*;
 import java.util.*;
 
-public class InnitFile {
+public class MergeSortFile {
     public static void sortTheCsv() {
-        String inputFilePath = "data/contacts.csv";
-        String outputFilePath = "data/sorted_contacts.csv";
+        String inputFilePath = "src\\data\\contacts.csv";
+        String outputFilePath = "src\\data\\contacts.csv";
         List<String[]> rows = new ArrayList<>();
     
         try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath))) {
