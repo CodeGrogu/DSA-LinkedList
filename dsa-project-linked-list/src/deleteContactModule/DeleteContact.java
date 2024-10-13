@@ -8,7 +8,7 @@ public class DeleteContact {
         Scanner scanner = new Scanner(System.in);
         try {
             // Load contacts from CSV file
-            List<String[]> contacts = CSVUtils.readCSV("data/contacts.csv");
+            List<String[]> contacts = CSVUtils.readCSV("data\\contacts.csv");
             System.out.println("Are you sure you want to delete the contact: " + firstName + " " + lastName + "? (yes/no)");
             String response = scanner.nextLine();
 
@@ -30,7 +30,7 @@ public class DeleteContact {
                     System.out.println("Contact not found.");
                 } else {
                     // Save updated contacts back to CSV file
-                    CSVUtils.writeCSV("data/contacts.csv", contacts);
+                    CSVUtils.writeCSV("data\\contacts.csv", contacts);
                 }
             } else {
                 System.out.println("Deletion cancelled.");
