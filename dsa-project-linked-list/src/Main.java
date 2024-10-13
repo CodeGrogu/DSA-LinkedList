@@ -9,6 +9,8 @@ import BinarySearch.updateContact;
 import searchModule.searchContact;
 
 import displayContactModule.DisplayContacts;
+import SearchModule.SearchContact;
+
 import insertContactModule.InsertContact;
 
 public class Main {
@@ -70,6 +72,7 @@ public class Main {
         }
     }
 
+
     private static int getUserChoice(Scanner scanner) {
         int choice = -1;
         while (true) {
@@ -110,6 +113,7 @@ public class Main {
         String notes = scanner.nextLine();
         InsertContact.addContact(firstName,lastName,email,phoneNumber,company,jobTitle,city,region,country,notes);
     }
+    
 
     private static void searchContact(Scanner scanner) {
         System.out.print("Enter first name of the contact you want to search for: ");
