@@ -1,4 +1,4 @@
-//package insertContactModule;
+package insertContactModule;
 
 import java.io.FileWriter;
 import java.io.IOException;

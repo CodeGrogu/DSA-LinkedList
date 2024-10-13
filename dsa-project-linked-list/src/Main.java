@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-import SearchModule.SearchContact;
+import searchModule.searchContact;
 import deleteContactModule.DeleteContact;
 import insertContactModule.InsertContact;
 import sortModule.MergeSortFile;
 import displayContactModule.DisplayContacts;
-import updateModule.updateContact;
+import updateModule.UpdateContact;
 
 public class Main {
     public static void main(String[] args) {
@@ -80,7 +80,7 @@ public class Main {
         String phoneNumber = scanner.nextLine();
         System.out.print("Enter Email: ");
         String email = scanner.nextLine();
-        InsertContact.insertContact(firstName, lastName, phoneNumber, email);
+        InsertContact.addContact(firstName, lastName, phoneNumber, email);
 
     }
     
@@ -90,7 +90,7 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scanner.nextLine();
-        SearchContact.searchContact(firstName, lastName);
+        searchContact.searchContact(firstName, lastName);
 }
 
 private static void updateContact(Scanner scanner) {
@@ -98,7 +98,7 @@ private static void updateContact(Scanner scanner) {
     String firstName = scanner.nextLine();
     System.out.print("Enter last name: ");
     String lastName = scanner.nextLine();
-    SearchContact.searchContact(firstName, lastName);
+    searchContact.searchContact(firstName, lastName);
 }
 
     private static void deleteContact(Scanner scanner) {
