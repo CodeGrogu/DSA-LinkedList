@@ -10,17 +10,17 @@ import java.util.Scanner;
 
 public class searchContact {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter first name of the contact you want to search for: ");
-        String firstName = scanner.nextLine();
+        String firstName = scan.nextLine();
 
         System.out.print("Enter last name of the contact you want to search for: ");
-        String lastName = scanner.nextLine();
+        String lastName = scan.nextLine();
 
         searchContact(firstName, lastName);
         
-        scanner.close();
+        scan.close();
     }
 
     public static void searchContact(String firstName, String lastName) {
