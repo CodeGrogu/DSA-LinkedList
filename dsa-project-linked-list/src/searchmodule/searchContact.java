@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class SearchContact {
-    public static void searchContact() {
+public class searchContact {
+    public static void searchContact(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter first name of the contact you want to search for: ");
@@ -23,7 +23,7 @@ public class SearchContact {
     }
 
     public static void searchContact(String firstName, String lastName) {
-        String file = "src\\data\\contacts.csv"; // Path to your contacts CSV file
+        String file = "dsa-project-linked-list/src/data/contacts.csv"; // Path to your contacts CSV file
         BufferedReader reader = null;  // Initialize BufferedReader
         String line; // Read each line of the file 
 
@@ -65,10 +65,16 @@ public class SearchContact {
         if (index >= 0) {
             String[] contact = contacts.get(index);
             System.out.println("Contact found: ");
-            System.out.println("Name: " + contact[0] + " " + contact[1]);
-            for (int i = 2; i < contact.length; i++) { // Start printing from the third column
-                System.out.print(contact[i] + " "); 
-            }
+            System.out.println("Name: " + contact[0] + " " + contact[1] + 
+                   "\nEmail: " + contact[2] + 
+                   "\nPhone Number: " + contact[3] + 
+                   "\nCompany: " + contact[4] + 
+                   "\nJob Title: " + contact[5] + 
+                   "\nCity: " + contact[6] + 
+                   "\nRegion: " + contact[7] + 
+                   "\nCountry: " + contact[8] + 
+                   "\nNotes: " + contact[9]);
+
             System.out.println();
         } else {
             System.out.println("Contact not found.");
