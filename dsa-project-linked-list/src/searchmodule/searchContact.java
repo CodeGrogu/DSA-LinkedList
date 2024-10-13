@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class searchContact {
+public class SearchContact {
     public static void searchContact() {
         Scanner scan = new Scanner(System.in);
 
@@ -24,7 +24,7 @@ public class searchContact {
     }
 
     public static void searchContact(String firstName, String lastName) {
-        String file = "dsa-project-linked-list\\src\\data\\contacts.csv"; // Path to your contacts CSV file
+        String file = "src\\data\\contacts.csv"; // Path to your contacts CSV file
         BufferedReader reader = null;  // Initialize BufferedReader
         String line; // Read each line of the file 
 
