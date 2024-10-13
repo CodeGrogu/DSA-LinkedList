@@ -62,8 +62,10 @@ public class Main {
         String lastName = scanner.nextLine();
         System.out.print("Enter phone number: ");
         String phoneNumber = scanner.nextLine();
-        phonebook.insertContact(firstName, lastName, phoneNumber);
+        PhoneBook.insertContact(firstName, lastName, phoneNumber);
+
     }
+    
 
     private static void searchContact(Scanner scanner, PhoneBook phonebook) {
         System.out.print("Enter first name: ");
@@ -71,13 +73,12 @@ public class Main {
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
         phonebook.searchContact(firstName, lastName);
-    }
+}
 
     private static void deleteContact(Scanner scanner, PhoneBook phonebook) {
         System.out.print("Enter first name: ");
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
-        phonebook.deleteContact(firstName, lastName);
     }
 }
