@@ -5,24 +5,24 @@ import deleteContactModule.DeleteContact;
 import sortModule.MergeSortFile;
 
 import updateModule.UpdateContact;
-
-import displayContactModule.DisplayContacts;
 import SearchModule.SearchContact;
 
+import displayContactModule.DisplayContacts;
 import insertContactModule.InsertContact;
 
 public class Main {
     public static void main(String[] args) {
 
         MergeSortFile.sortTheCsv();
+        
 
         Scanner scanner = new Scanner(System.in);
         int choice;
 
-        do {
-            displayMenu();
-            choice = getUserChoice(scanner);
+        displayMenu();
+        choice = getUserChoice(scanner);
 
+        do {
             switch (choice) {
                 case 1:
                     insertContact(scanner);
@@ -37,20 +37,21 @@ public class Main {
                     DisplayContacts.displayContacts();
                     break;
                 case 5:
-                System.out.print("Enter first name: ");
-                String firstName = scanner.nextLine();
-                System.out.print("Enter last name: ");
-                String lastName = scanner.nextLine();
-                BinarySearch.searchAndUpdate("John", "Doe");
-                break;
-
+                    System.out.print("Enter first name: ");
+                    String firstName = scanner.nextLine();
+                    System.out.print("Enter last name: ");
+                    String lastName = scanner.nextLine();
+                    BinarySearch.searchAndUpdate(firstName, lastName);
+                    break;
                 case 6:
                     System.out.println("Exiting...");
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-        } while (choice != 5);
+            displayMenu();
+            choice = getUserChoice(scanner);
+        } while (choice != 6);
 
         scanner.close();
     }
@@ -65,7 +66,6 @@ public class Main {
         System.out.println("6. Exit");
         System.out.print("Enter your choice: ");
     }
-
 
     private static int getUserChoice(Scanner scanner) {
         while (!scanner.hasNextInt()) {
@@ -91,17 +91,23 @@ public class Main {
 
 
     }
-    
 
     private static void searchContact(Scanner scanner) {
         System.out.print("Enter first name of the contact you want to search for: ");
         String firstName = scanner.nextLine();
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scanner.nextLine();
-        SearchContact.searchContact(firstName, lastName);      
+        SearchContact.searchContact(firstName, lastName);
 }
 
 
+
+    private static void UpdateContact(Scanner scanner) {
+        System.out.print("Enter first name: ");
+        String firstName = scanner.nextLine();
+        System.out.print("Enter last name: ");
+        String lastName = scanner.nextLine();
+    }
 
     private static void deleteContact(Scanner scanner) {
         System.out.print("Enter first name: ");

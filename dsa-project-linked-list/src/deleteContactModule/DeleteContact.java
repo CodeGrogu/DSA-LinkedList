@@ -5,32 +5,45 @@ import java.util.Scanner;
 
 import BinarySearch.*;
 
+import java.util.*;
+import java.io.IOException;
+
 public class DeleteContact {
-
-    public static void deleteContact(String firstName, String lastName) throws IOException {
-        BinarySearch.BinarySearch binary = new BinarySearch();
-        
-        // Load contacts from the CSV file
-        List<String[]> contacts = BinarySearch.loadContacts("src/data/contacts.csv");
-        BinarySearch.sortContacts(contacts);
-        int resultIndex = BinarySearch.binarySearch(contacts, firstName, lastName);
-        if (resultIndex != -1) {
-            // Contact found, proceed to delete
-            contacts.remove(resultIndex); // Remove the contact from the list
-            BinarySearch.saveContacts("src/data/contacts.csv", contacts); // Save the updated contacts
-            System.out.println("Contact deleted successfully.");
-        } else {
-            System.out.println("Contact not found.");
-        }
-    }
-
-    public static void main(String[] args) throws IOException {
+    public static void deleteContact(String firstName, String lastName) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the first name of the contact to delete: ");
-        String firstName = scanner.nextLine();
-        System.out.print("Enter the last name of the contact to delete: ");
-        String lastName = scanner.nextLine();
-        deleteContact(firstName, lastName);
-        scanner.close();
+        try {
+            // Load contacts from CSV file
+            List<String[]> contacts = CSVUtils.readCSV("data\\contacts.csv");
+            System.out.println("Are you sure you want to delete the contact: " + firstName + " " + lastName + "? (yes/no)");
+            String response = scanner.nextLine();
+
+            if (response.equalsIgnoreCase("yes")) {
+                Iterator<String[]> iterator = contacts.iterator();
+                boolean contactFound = false;
+
+                while (iterator.hasNext()) {
+                    String[] contact = iterator.next();
+                    if (contact[0].equals(firstName) && contact[1].equals(lastName)) {
+                        iterator.remove();
+                        contactFound = true;
+                        System.out.println("Contact deleted successfully.");
+                        break;
+                    }
+                }
+
+                if (!contactFound) {
+                    System.out.println("Contact not found.");
+                } else {
+                    // Save updated contacts back to CSV file
+                    CSVUtils.writeCSV("data\\contacts.csv", contacts);
+                }
+            } else {
+                System.out.println("Deletion cancelled.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred while processing the CSV file: " + e.getMessage());
+        } finally {
+            scanner.close();
+        }
     }
 }
