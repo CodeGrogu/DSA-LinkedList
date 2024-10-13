@@ -4,17 +4,13 @@ import searchModule.searchContact;
 import deleteContactModule.DeleteContact;
 import insertContactModule.InsertContact;
 import sortModule.MergeSortFile;
+// import updateModule.UpdateContact;
 import displayContactModule.DisplayContacts;
-import updateModule.UpdateContact;
 
 public class Main {
     public static void main(String[] args) {
-        MergeSortFile mergeSort = new MergeSortFile();
-        // sort the list before using it
-        
-        mergeSort.sortTheCsv();
+        MergeSortFile.sortTheCsv();
 
-        DisplayContacts display = new DisplayContacts();
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -33,10 +29,10 @@ public class Main {
                     deleteContact(scanner);
                     break;
                 case 4:
-                    display.displayContacts();
+                    DisplayContacts.displayContacts();
                     break;
                 case 5:
-                    updateContact(scanner);
+                    //UpdateContact.searchAndUpdate("John", "Doe");
                     break;
                 case 6:
                     System.out.println("Exiting...");
