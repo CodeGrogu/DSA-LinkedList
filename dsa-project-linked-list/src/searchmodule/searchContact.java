@@ -52,6 +52,7 @@ public class searchContact {
         // Sort the list of contacts based on first name and last name
         Collections.sort(contacts, new Comparator<String[]>() {
             @Override
+            
             public int compare(String[] contact1, String[] contact2) {
                 int firstNameComparison = contact1[0].compareToIgnoreCase(contact2[0]);
                 if (firstNameComparison == 0) {
@@ -62,6 +63,7 @@ public class searchContact {
         });
 
         // Perform binary search
+        analyzeEfficiency(firstName, lastName);
         int index = binarySearch(contacts, firstName, lastName);
 
         if (index >= 0) {
@@ -84,6 +86,7 @@ public class searchContact {
     }
 
     private static int binarySearch(ArrayList<String[]> contacts, String firstName, String lastName) {
+        
         int low = 0;
         int high = contacts.size() - 1;
 
