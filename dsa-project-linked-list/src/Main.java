@@ -1,17 +1,11 @@
 import BinarySearch.BinarySearch;
-
+import deleteContactModule.DeleteContact;
+import displayContactModule.DisplayContacts;
+import insertContactModule.InsertContact;
 import java.io.IOException;
 import java.util.Scanner;
-
-import deleteContactModule.DeleteContact;
-import sortModule.MergeSortFile;
-
-import updateModule.UpdateContact;
-
-import displayContactModule.DisplayContacts;
 import searchModule.searchContact;
-
-import insertContactModule.InsertContact;
+import sortModule.MergeSortFile;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -22,6 +16,7 @@ public class Main {
         int choice;
 
         do {
+            
             displayMenu();
             choice = getUserChoice(scanner);
 

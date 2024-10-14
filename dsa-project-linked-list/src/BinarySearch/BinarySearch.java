@@ -124,9 +124,7 @@ public class BinarySearch {
     public static void saveContacts(String filePath, List<String[]> contacts) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));
         // Write header
-        bw.write("firstName,lastName,email,phoneNumber,company,jobTitle,city,region,country,notes\n");
-        
-        // Write each contact back to the file
+        // bw.write("firstName,lastName,email,phoneNumber,company,jobTitle,city,region,country,notes\n");
         for (String[] contact : contacts) {
             bw.write(String.join(",", contact) + "\n");
         }

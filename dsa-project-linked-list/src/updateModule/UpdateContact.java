@@ -7,6 +7,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
+import sortModule.MergeSortFile;
+
 public class UpdateContact {
 
     // Load contacts from the CSV file
@@ -125,7 +127,7 @@ public class UpdateContact {
     public static void saveContacts(String filePath, List<String[]> contacts) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));
         // Write header
-        bw.write("firstName,lastName,email,phoneNumber,company,jobTitle,city,region,country,notes\n");
+        bw.write("\n");
         
         // Write each contact back to the file
         for (String[] contact : contacts) {
@@ -157,6 +159,7 @@ public class UpdateContact {
                 // Save the updated contacts list back to the CSV
                 saveContacts("dsa-project-linked-list\\src\\data\\contacts.csv", contacts);
                 System.out.println("Contact updated successfully.");
+                MergeSortFile.sortTheCsv();
             } else {
                 System.out.println("Contact not found.");
             }
@@ -165,8 +168,8 @@ public class UpdateContact {
         }
     }
 
-    public static void main(String[] args) {
-        // Example usage
-        searchAndUpdate("John", "Doe");
-    }
+    // public static void main(String[] args) {
+    //     // Example usage
+    //     searchAndUpdate("John", "Doe");
+    // }
 }
