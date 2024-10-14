@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class searchContact {
     public static void searchContact() {
         Scanner scan = new Scanner(System.in);
-        long startTime = System.nanoTime();
         
         System.out.print("Enter first name of the contact you want to search for: ");
         String firstName = scan.nextLine();
@@ -19,7 +18,8 @@ public class searchContact {
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scan.nextLine();
 
-        searchContact(firstName, lastName);
+        // Call analyzeEfficiency to measure the search operation
+        analyzeEfficiency(firstName, lastName);
 
         scan.close();
     }
