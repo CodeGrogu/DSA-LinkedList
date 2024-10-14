@@ -3,6 +3,18 @@
 Our project is a simple phonebook application implemented in Java. It allows users to insert, search, delete, update, and display contacts stored in a CSV file. The application uses various data structures and algorithms to manage and manipulate the contact data efficiently. We use Binary search for searching functions, deleting when finding the correct contact. When inserting, we append it to the end of the file, and then sort the file. 
 We ensure the .csv is sorted at all times. So after any operation, which manipulates the file, we sort it.
 
+**Contributors**
+`Jaden Awiseb`
+`Rejoice Teca`
+`Hileni Nghishiliwa`
+`Adolf David`
+`Andris`
+`Uutshona Kaholongo`
+
+
+
+
+
 ## Features
 
 - **Insert Contact**: Add a new contact to the phonebook.
@@ -67,11 +79,4 @@ The contacts are stored in a CSV file with the following columns:
 4. Compile the Java files.
 5. Run the `Main` class to start the application.
 
-```sh
-javac Main.java
-java Main
-```
 
-## License
-
-This project is licensed under the MIT License.
