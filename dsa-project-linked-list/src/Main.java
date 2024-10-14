@@ -26,12 +26,14 @@ public class Main {
             switch (choice) {
                 case 1:
                     insertContact(scanner);
+                    MergeSortFile.sortTheCsv();
                     break;
                 case 2:
                     searchContact(scanner);
                     break;
                 case 3:
                     deleteContact(scanner);
+                    MergeSortFile.sortTheCsv();
                     break;
                 case 4:
                     DisplayContacts.displayContacts();

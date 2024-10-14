@@ -8,16 +8,15 @@ import BinarySearch.*;
 public class DeleteContact {
 
     public static void deleteContact(String firstName, String lastName) throws IOException {
-        BinarySearch.BinarySearch binary = new BinarySearch();
         
         // Load contacts from the CSV file
-        List<String[]> contacts = BinarySearch.loadContacts("src/data/contacts.csv");
+        List<String[]> contacts = BinarySearch.loadContacts("dsa-project-linked-list\\src\\data\\contacts.csv");
         BinarySearch.sortContacts(contacts);
         int resultIndex = BinarySearch.binarySearch(contacts, firstName, lastName);
         if (resultIndex != -1) {
             // Contact found, proceed to delete
             contacts.remove(resultIndex); // Remove the contact from the list
-            BinarySearch.saveContacts("src/data/contacts.csv", contacts); // Save the updated contacts
+            BinarySearch.saveContacts("dsa-project-linked-list\\src\\data\\contacts.csv", contacts); // Save the updated contacts
             System.out.println("Contact deleted successfully.");
         } else {
             System.out.println("Contact not found.");

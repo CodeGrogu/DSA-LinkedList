@@ -138,7 +138,7 @@ public class UpdateContact {
     public static void searchAndUpdate(String firstName, String lastName) {
         try {
             // Load contacts from CSV
-            List<String[]> contacts = loadContacts("src/data/contacts.csv");
+            List<String[]> contacts = loadContacts("dsa-project-linked-list\\src\\data\\contacts.csv");
 
             // Sort contacts before performing binary search
             sortContacts(contacts);
@@ -155,7 +155,7 @@ public class UpdateContact {
                 contacts.set(resultIndex, updatedContact);
 
                 // Save the updated contacts list back to the CSV
-                saveContacts("src/data/contacts.csv", contacts);
+                saveContacts("dsa-project-linked-list\\src\\data\\contacts.csv", contacts);
                 System.out.println("Contact updated successfully.");
             } else {
                 System.out.println("Contact not found.");
