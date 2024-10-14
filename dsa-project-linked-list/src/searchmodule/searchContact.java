@@ -1,4 +1,4 @@
-package SearchModule;
+package searchModule;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class SearchContact {
+public class searchContact {
     public static void searchContact() {
         Scanner scan = new Scanner(System.in);
 

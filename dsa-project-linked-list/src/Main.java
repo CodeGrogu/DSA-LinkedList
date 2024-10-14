@@ -9,7 +9,7 @@ import sortModule.MergeSortFile;
 import updateModule.UpdateContact;
 
 import displayContactModule.DisplayContacts;
-import SearchModule.SearchContact;
+import searchModule.searchContact;
 
 import insertContactModule.InsertContact;
 
@@ -113,7 +113,7 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scanner.nextLine();
-        SearchContact.searchContact(firstName, lastName);      
+        searchContact.searchContact(firstName, lastName);      
 }
 
 
