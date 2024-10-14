@@ -32,4 +32,13 @@ public class MergeSortFile {
         }
     }
     
+
+    public static void analyzeEfficiency() {
+        long startTime = System.nanoTime();
+        sortTheCsv();
+        long endTime = System.nanoTime();
+        long duration = endTime - startTime;
+        System.out.println("Time taken to sort the CSV file: " + duration + " nanoseconds");
+    }
+    
 }

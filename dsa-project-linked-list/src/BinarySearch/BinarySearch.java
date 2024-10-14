@@ -115,11 +115,31 @@ public class BinarySearch {
             System.out.print("Notes (" + contact[9] + "): ");
             String notes = scanner.nextLine();
             if (notes.isEmpty()) notes = contact[9];
-
+            analyzeEfficiency(firstName, lastName);
             return new String[] { firstName, lastName, email, phoneNumber, company, jobTitle, city, region, country, notes };
         }
+   
     }
+ // Method to analyze the efficiency of the binary search
+ public static void analyzeEfficiency(String firstName, String lastName) {
+    try {
+    // Load contacts from CSV
+    List<String[]> contacts = loadContacts("dsa-project-linked-list\\src\\data\\contacts.csv");
 
+    // Sort contacts before performing binary search
+    sortContacts(contacts);
+
+    // Measure the time taken for binary search
+    long startTime = System.nanoTime();
+    binarySearch(contacts, firstName, lastName);
+    long endTime = System.nanoTime();
+
+    long duration = endTime - startTime;
+    System.out.println("Time taken for binary search: " + duration + " nanoseconds");
+    } catch (IOException e) {
+    e.printStackTrace();
+    }
+}
     // Save the updated contacts list back to the CSV file
     public static void saveContacts(String filePath, List<String[]> contacts) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));
