@@ -3,6 +3,8 @@
 Our project is a simple phonebook application implemented in Java. It allows users to insert, search, delete, update, and display contacts stored in a CSV file. The application uses various data structures and algorithms to manage and manipulate the contact data efficiently. We use Binary search for searching functions, deleting when finding the correct contact. When inserting, we append it to the end of the file, and then sort the file. 
 We ensure the .csv is sorted at all times. So after any operation, which manipulates the file, we sort it.
 
+Displays time taken for the binary search to complete.  This is done by using the System.nanoTime() method before and after the binary search operation.
+
 **Contributors:**
 `Jaden Awaseb`
 `Rejoice Teca`
