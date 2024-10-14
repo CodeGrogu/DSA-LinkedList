@@ -2,6 +2,7 @@ import BinarySearch.BinarySearch;
 import Searchmodule.SearchContact;
 import deleteContactModule.DeleteContact;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import sortModule.MergeSortFile;
@@ -11,7 +12,7 @@ import displayContactModule.DisplayContacts;
 import insertContactModule.InsertContact;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         MergeSortFile.sortTheCsv();
 
@@ -119,11 +120,12 @@ public class Main {
 
 
 
-    private static void deleteContact(Scanner scanner) {
+    private static void deleteContact(Scanner scanner) throws IOException {
         System.out.print("Enter first name: ");
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
+        DeleteContact.deleteContact(firstName, lastName);
         
     }
 }
