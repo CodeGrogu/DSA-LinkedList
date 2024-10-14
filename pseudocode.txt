@@ -1,0 +1,121 @@
+START APPLICATION
+    INITIALIZE scanner
+    LOAD contacts from CSV file
+    DISPLAY main menu
+
+DISPLAY MAIN MENU
+    SHOW options:
+        1. Insert Contact
+        2. Search Contact
+        3. Delete Contact
+        4. Display All Contacts
+        5. Update Contact
+        6. Exit
+
+GET USER CHOICE
+    PROMPT user to enter choice (1-6)
+    VALIDATE input
+        IF input is not between 1 and 6 THEN
+            DISPLAY "Invalid choice, please enter a number between 1 and 6"
+            PROMPT user to enter choice again
+
+HANDLE USER CHOICE
+    IF choice == 1 THEN
+        CALL insertContact
+    ELSE IF choice == 2 THEN
+        CALL searchContact
+    ELSE IF choice == 3 THEN
+        CALL deleteContact
+    ELSE IF choice == 4 THEN
+        CALL displayContacts
+    ELSE IF choice == 5 THEN
+        CALL updateContact
+    ELSE IF choice == 6 THEN
+        EXIT application
+
+INSERT CONTACT
+    PROMPT user to enter first name, last name, phone number, email
+    VALIDATE input
+        IF any input is invalid THEN
+            DISPLAY "Invalid input, please enter valid details"
+            PROMPT user to enter details again
+    SAVE contact details
+
+SEARCH CONTACT
+    PROMPT user to enter search criteria
+    VALIDATE input
+    SEARCH for contact
+    DISPLAY search results
+
+DELETE CONTACT
+    PROMPT user to enter contact identifier
+    VALIDATE input
+    DELETE contact
+    CONFIRM deletion
+
+DISPLAY ALL CONTACTS
+    RETRIEVE all contacts
+    DISPLAY contacts
+
+UPDATE CONTACT
+    PROMPT user to enter contact identifier
+    VALIDATE input
+    PROMPT user to enter new details
+    VALIDATE new details
+    UPDATE contact
+    CONFIRM update
+
+EXIT APPLICATION
+    CLOSE scanner
+    EXIT application
+
+ContactManager.java
+
+LOAD CONTACTS
+    OPEN CSV file
+    READ each line
+    SPLIT line into contact details
+    ADD contact to list
+    RETURN list of contacts
+
+SAVE CONTACTS
+    OPEN CSV file
+    WRITE header line
+    FOR each contact in list
+        WRITE contact to file
+    CLOSE file
+
+BinarySearch.java
+
+SEARCH BY FIRST NAME
+    FOR each contact in list
+        IF contact's first name matches given first name THEN
+            ADD contact to result list
+    RETURN result list
+
+SEARCH AND UPDATE
+    SEARCH for contact by first name and last name
+    IF contact found THEN
+        PROMPT user to enter new details
+        UPDATE contact in list
+
+DeleteContact.java
+
+DELETE CONTACT
+    SEARCH for contact by first name and last name
+    IF contact found THEN
+        REMOVE contact from list
+
+DisplayContacts.java
+
+DISPLAY CONTACTS
+    FOR each contact in list
+        PRINT contact details
+
+UpdateContact.java
+
+UPDATE CONTACT
+    SEARCH for contact by first name and last name
+    IF contact found THEN
+        PROMPT user to enter new details
+        UPDATE contact in list
