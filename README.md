@@ -1,82 +1,48 @@
-# DSA Group Project
+# DSA Project: Linked List
 
-Our project is a simple phonebook application implemented in Java. It allows users to insert, search, delete, update, and display contacts stored in a CSV file. The application uses various data structures and algorithms to manage and manipulate the contact data efficiently. We use Binary search for searching functions, deleting when finding the correct contact. When inserting, we append it to the end of the file, and then sort the file. 
-We ensure the .csv is sorted at all times. So after any operation, which manipulates the file, we sort it.
+Welcome to the DSA Linked List project! This project is designed to help you understand and implement linked lists in Java using Visual Studio Code.
 
-**Contributors:**
-`Jaden Awaseb`
-`Rejoice Teca`
-`Hileni Nghiishililwa`
-`Adolf David`
-`Andris Kaishungu`
-`Uutshona Kaholongo`
+## Folder Structure
 
+The workspace contains the following folders:
 
+- `src`: Contains the source code for the project.
+  - `BinarySearch/`: Contains the binary search implementation.
+  - `data/`: Contains data files such as `contacts.csv`.
+  - `deleteContactModule/`: Contains the module for deleting contacts.
+  - `displayContactModule/`: Contains the module for displaying contacts.
+  - `insertContactModule/`: Contains the module for inserting contacts.
+  - `searchModule/`: Contains the module for searching contacts.
+  - `sortModule/`: Contains the module for sorting contacts.
+  - `updateModule/`: Contains the module for updating contacts.
+  - `Main.java`: The main entry point of the project.
+- `bin`: Contains the compiled output files.
+  - `BinarySearch/`: Contains compiled classes for binary search.
+  - `data/`: Contains compiled data-related classes.
+  - `deleteContactModule/`: Contains compiled classes for deleting contacts.
+  - `displayContactModule/`: Contains compiled classes for displaying contacts.
+  - `insertContactModule/`: Contains compiled classes for inserting contacts.
+  - `searchModule/`: Contains compiled classes for searching contacts.
+  - `sortModule/`: Contains compiled classes for sorting contacts.
+  - `updateModule/`: Contains compiled classes for updating contacts.
+  - `Main.class`: The compiled main entry point of the project.
+- `.vscode`: Contains Visual Studio Code specific settings.
 
+> To customize the folder structure, open `.vscode/settings.json` and update the related settings.
 
+## Dependency Management
 
-## Features
+The `JAVA PROJECTS` view in Visual Studio Code allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
 
-- **Insert Contact**: Add a new contact to the phonebook.
-- **Search Contact**: Search for a contact by first name and last name.
-- **Delete Contact**: Remove a contact from the phonebook.
-- **Update Contact**: Update the details of an existing contact.
-- **Display All Contacts**: Display all contacts in the phonebook.
+## Contributors
 
-## Modules and Key Methods
+- **The Team** - Initial work and project setup.
 
-### Main Module
-- `displayMenu()`: Displays the main menu options.
-- `getUserChoice(Scanner scanner)`: Gets the user's choice from the menu.
-- `insertContact(Scanner scanner)`: Handles the insertion of a new contact.
-- `searchContact(Scanner scanner)`: Handles the search for a contact.
-- `deleteContact(Scanner scanner)`: Handles the deletion of a contact.
+## Getting Started
 
-### InsertContact Module
-- `addContact(String firstName, String lastName, String email, String phoneNumber, String company, String jobTitle, String city, String region, String country, String notes)`: Adds a new contact to the list and saves it to the CSV file.
-- `saveContactToCSV(Contact contact)`: Saves the contact details to the CSV file.
+To get started with this project:
 
-### SearchContact Module
-- `searchContact()`: Prompts the user for the first and last name of the contact to search for.
-- `searchContact(String firstName, String lastName)`: Searches for a contact in the CSV file using the provided names.
-
-### DeleteContact Module
-- `deleteContact(String firstName, String lastName)`: Deletes a contact from the CSV file based on the provided names.
-
-### DisplayContacts Module
-- `displayContacts()`: Displays all contacts from the CSV file.
-- `getColumnWidths(String[] headers)`: Calculates the column widths for display.
-- `printRow(String[] row, int[] columnWidths)`: Prints a single row with aligned columns.
-- `printSeparator(int[] columnWidths)`: Prints a separator line between header and data rows.
-
-### BinarySearch Module
-- `loadContacts(String filePath)`: Loads contacts from the CSV file.
-- `sortContacts(List<String[]> contacts)`: Sorts the contacts by first name and last name.
-- `binarySearch(List<String[]> contacts, String firstName, String lastName)`: Performs a binary search to find a contact by first name and last name.
-
-### MergeSortFile Module
-- `sortTheCsv()`: Sorts the contacts in the CSV file based on the first name using the Merge Sort algorithm.
-
-## CSV File Structure
-
-The contacts are stored in a CSV file with the following columns:
-- First Name
-- Last Name
-- Email
-- Phone Number
-- Company
-- Job Title
-- City
-- Region
-- Country
-- Notes
-
-## How to Run
-
-1. Ensure you have Java installed on your system.
-2. Clone the repository.
-3. Navigate to the project directory.
-4. Compile the Java files.
-5. Run the `Main` class to start the application.
-
-
+1. Clone the repository to your local machine.
+2. Open the project in Visual Studio Code.
+3. Ensure you have the necessary Java extensions installed.
+4. Build and run the project to see the linked list implementation in action.
