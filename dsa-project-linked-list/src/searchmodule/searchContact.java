@@ -66,9 +66,15 @@ public class SearchContact {
             String[] contact = contacts.get(index);
             System.out.println("Contact found: ");
             System.out.println("Name: " + contact[0] + " " + contact[1]);
-            for (int i = 2; i < contact.length; i++) { // Start printing from the third column
-                System.out.print(contact[i] + " "); 
-            }
+            System.out.println("Email: " + contact[2]);
+            System.out.println("Phone Number: " + contact[3]);
+            System.out.println("Company: " + contact[4]);
+            System.out.println("Job Title: " + contact[5]);
+            System.out.println("City: " + contact[6]);
+            System.out.println("Region: " + contact[7]);
+            System.out.println("Country: " + contact[8]);
+            System.out.println("Notes: " + contact[9]);
+            
             System.out.println();
         } else {
             System.out.println("Contact not found.");
