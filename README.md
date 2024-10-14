@@ -6,9 +6,9 @@ We ensure the .csv is sorted at all times. So after any operation, which manipul
 **Contributors:**
 `Jaden Awiseb`
 `Rejoice Teca`
-`Hileni Nghishiliwa`
+`Hileni Nghiishililwa`
 `Adolf David`
-`Andris`
+`Andris Kaishungu`
 `Uutshona Kaholongo`
 
 
