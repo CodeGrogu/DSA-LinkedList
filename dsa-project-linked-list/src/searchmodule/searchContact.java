@@ -10,7 +10,8 @@ import java.util.Scanner;
 public class searchContact {
     public static void searchContact() {
         Scanner scan = new Scanner(System.in);
-
+        long startTime = System.nanoTime();
+        
         System.out.print("Enter first name of the contact you want to search for: ");
         String firstName = scan.nextLine();
 
@@ -18,6 +19,10 @@ public class searchContact {
         String lastName = scan.nextLine();
 
         searchContact(firstName, lastName);
+
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime);
+        System.out.println("Search duration: " + duration + " nanoseconds");
         
         scan.close();
     }
