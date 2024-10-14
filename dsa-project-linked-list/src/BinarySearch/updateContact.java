@@ -1,4 +1,4 @@
-package updateModule;
+package BinarySearch;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-public class UpdateContact {
+public class updateContact {
 
     // Load contacts from the CSV file
     public static List<String[]> loadContacts(String filePath) throws IOException {
@@ -75,7 +75,6 @@ public class UpdateContact {
     // Method to prompt user for updated contact details
     public static String[] promptForNewDetails(String[] contact) {
         try (Scanner scanner = new Scanner(System.in)) {
-
             System.out.println("Enter new details (press Enter to keep the current value):");
             System.out.print("First Name (" + contact[0] + "): ");
             String firstName = scanner.nextLine();
@@ -126,8 +125,6 @@ public class UpdateContact {
         BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));
         // Write header
         bw.write("firstName,lastName,email,phoneNumber,company,jobTitle,city,region,country,notes\n");
-        
-        // Write each contact back to the file
         for (String[] contact : contacts) {
             bw.write(String.join(",", contact) + "\n");
         }
@@ -138,7 +135,7 @@ public class UpdateContact {
     public static void searchAndUpdate(String firstName, String lastName) {
         try {
             // Load contacts from CSV
-            List<String[]> contacts = loadContacts("src/data/contacts.csv");
+            List<String[]> contacts = loadContacts("data\\contacts.csv");
 
             // Sort contacts before performing binary search
             sortContacts(contacts);
@@ -155,7 +152,7 @@ public class UpdateContact {
                 contacts.set(resultIndex, updatedContact);
 
                 // Save the updated contacts list back to the CSV
-                saveContacts("src/data/contacts.csv", contacts);
+                saveContacts("data\\contacts.csv", contacts);
                 System.out.println("Contact updated successfully.");
             } else {
                 System.out.println("Contact not found.");
@@ -165,8 +162,8 @@ public class UpdateContact {
         }
     }
 
-    public static void main(String[] args) {
-        // Example usage
-        searchAndUpdate("John", "Doe");
-    }
+    // public static void main(String[] args) {
+    //     // Example usage
+    //     searchAndUpdate("John", "Doe");
+    // }
 }
