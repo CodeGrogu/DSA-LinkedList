@@ -1,4 +1,5 @@
 package searchModule;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,10 +21,6 @@ public class searchContact {
 
         searchContact(firstName, lastName);
 
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime);
-        System.out.println("Search duration: " + duration + " nanoseconds");
-        
         scan.close();
     }
 
@@ -116,4 +113,67 @@ public class searchContact {
         return firstNameComparison;
     }
 
+    public static void analyzeEfficiency(String firstName, String lastName) {
+        String file = "dsa-project-linked-list\\src\\data\\contacts.csv"; // Path to your contacts CSV file
+        BufferedReader reader = null;  // Initialize BufferedReader
+        String line; // Read each line of the file 
+
+        ArrayList<String[]> contacts = new ArrayList<>(); // List to store contacts
+
+        try {
+            reader = new BufferedReader(new FileReader(file));
+            while ((line = reader.readLine()) != null) {
+                String[] row = line.split(","); // Split the line by commas
+                contacts.add(row); // Add each row to the contacts list
+            }
+        } catch (IOException e) { // Handle file reading errors
+            e.printStackTrace();
+        } finally {
+            try {
+                if (reader != null) { 
+                    reader.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace(); // Handle potential IOException during close
+            }
+        }
+
+        // Sort the list of contacts based on first name and last name
+        Collections.sort(contacts, new Comparator<String[]>() {
+            @Override
+            public int compare(String[] contact1, String[] contact2) {
+                int firstNameComparison = contact1[0].compareToIgnoreCase(contact2[0]);
+                if (firstNameComparison == 0) {
+                    return contact1[1].compareToIgnoreCase(contact2[1]);
+                }
+                return firstNameComparison;
+            }
+        });
+
+        // Measure the time taken for binary search
+        long startTime = System.nanoTime();
+        int index = binarySearch(contacts, firstName, lastName);
+        long endTime = System.nanoTime();
+
+        long duration = endTime - startTime;
+        System.out.println("Time taken for binary search: " + duration + " nanoseconds");
+
+        if (index >= 0) {
+            String[] contact = contacts.get(index);
+            System.out.println("Contact found: ");
+            System.out.println("Name: " + contact[0] + " " + contact[1]);
+            System.out.println("Email: " + contact[2]);
+            System.out.println("Phone Number: " + contact[3]);
+            System.out.println("Company: " + contact[4]);
+            System.out.println("Job Title: " + contact[5]);
+            System.out.println("City: " + contact[6]);
+            System.out.println("Region: " + contact[7]);
+            System.out.println("Country: " + contact[8]);
+            System.out.println("Notes: " + contact[9]);
+            
+            System.out.println();
+        } else {
+            System.out.println("Contact not found.");
+        }
+    }
 }
