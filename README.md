@@ -4,7 +4,7 @@ Our project is a simple phonebook application implemented in Java. It allows use
 We ensure the .csv is sorted at all times. So after any operation, which manipulates the file, we sort it.
 
 **Contributors:**
-`Jaden Awiseb`
+`Jaden Awaseb`
 `Rejoice Teca`
 `Hileni Nghiishililwa`
 `Adolf David`
