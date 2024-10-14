@@ -1,4 +1,4 @@
-package searchModule;
+package Searchmodule;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class searchContact {
-    public static void searchForContact() {
+public class SearchContact {
+    public static void searchContact() {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter first name of the contact you want to search for: ");
@@ -17,12 +17,12 @@ public class searchContact {
         System.out.print("Enter last name of the contact you want to search for: ");
         String lastName = scan.nextLine();
 
-        findContact(firstName, lastName);
+        searchContact(firstName, lastName);
         
         scan.close();
     }
 
-    public static void findContact(String firstName, String lastName) {
+    public static void searchContact(String firstName, String lastName) {
         String file = "dsa-project-linked-list\\src\\data\\contacts.csv"; // Path to your contacts CSV file
         BufferedReader reader = null;  // Initialize BufferedReader
         String line; // Read each line of the file 
@@ -105,37 +105,4 @@ public class searchContact {
         return firstNameComparison;
     }
 
-    public static void findContact(String firstName) {
-        String file = "dsa-project-linked-list\\src\\data\\contacts.csv"; // Path to your contacts CSV file
-        BufferedReader reader = null;  // Initialize BufferedReader
-        String line; // Read each line of the file 
-
-        ArrayList<String[]> contacts = new ArrayList<>(); // List to store contacts
-
-        try {
-            reader = new BufferedReader(new FileReader(file));
-            reader.readLine(); // Skip the header line
-            while ((line = reader.readLine()) != null) {
-                String[] row = line.split(","); // Split the line by commas
-                if (row[0].toLowerCase().contains(firstName.toLowerCase())) { // Check for partial match in first name
-                    contacts.add(row); // Add matching row to the contacts list
-                }
-            }
-        } catch (IOException e) { // Handle file reading errors
-            e.printStackTrace();
-        } finally {
-            try {
-                if (reader != null) {
-                    reader.close(); // Close the BufferedReader
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-        // Display the matching contacts
-        for (String[] contact : contacts) {
-            System.out.println(String.join(", ", contact));
-        }
-    }
 }

@@ -1,21 +1,17 @@
-import java.util.Scanner;
-import java.io.File;
-import java.io.IOException;
-
+import BinarySearch.BinarySearch;
+import Searchmodule.SearchContact;
 import deleteContactModule.DeleteContact;
+
+import java.util.Scanner;
+
 import sortModule.MergeSortFile;
 
-import updateModule.UpdateContact;
 
 import displayContactModule.DisplayContacts;
-import SearchModule.SearchContact;
-
 import insertContactModule.InsertContact;
 
 public class Main {
     public static void main(String[] args) {
-        // Ensure the file exists
-        ensureFileExists("dsa-project-linked-list\\src\\data\\contacts.csv");
 
         MergeSortFile.sortTheCsv();
 
@@ -37,7 +33,7 @@ public class Main {
                     deleteContact(scanner);
                     break;
                 case 4:
-                    DisplayContacts.displayContacts(null, scanner);
+                    DisplayContacts.displayContacts();
                     break;
                 case 5:
                 System.out.print("Enter first name: ");
@@ -49,8 +45,7 @@ public class Main {
 
                 case 6:
                     System.out.println("Exiting...");
-                    scanner.close();
-                    return;
+                    break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
@@ -72,19 +67,13 @@ public class Main {
 
 
     private static int getUserChoice(Scanner scanner) {
-        int choice = -1;
-        while (true) {
-            try {
-                choice = Integer.parseInt(scanner.nextLine());
-                if (choice >= 1 && choice <= 6) {
-                    break;
-                } else {
-                    System.out.println("Invalid input. Please enter a number between 1 and 6.");
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number between 1 and 6.");
-            }
+        while (!scanner.hasNextInt()) {
+            System.out.println("Invalid input. Please enter a number between 1 and 6.");
+            scanner.next(); // Consume invalid input
+            System.out.print("Enter your choice: ");
         }
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
         return choice;
     }
 
@@ -97,19 +86,26 @@ public class Main {
         String phoneNumber = scanner.nextLine();
         System.out.print("Enter Email: ");
         String email = scanner.nextLine();
-        System.out.print("Enter company: ");
+        System.out.print("Enter Address: ");
+        String address = scanner.nextLine();
+        System.out.print("Enter Company: ");
         String company = scanner.nextLine();
-        System.out.print("Enter job title: ");
+        System.out.print("Enter Job Title: ");
         String jobTitle = scanner.nextLine();
-        System.out.print("Enter city: ");
+        System.out.print("Enter City: ");
         String city = scanner.nextLine();
-        System.out.print("Enter region: ");
+        System.out.print("Enter Region: ");
         String region = scanner.nextLine();
-        System.out.print("Enter country: ");
+        System.out.print("Enter Country: ");
         String country = scanner.nextLine();
-        System.out.print("Enter notes: ");
+        System.out.print("Enter Notes: ");
         String notes = scanner.nextLine();
-        InsertContact.addContact(firstName,lastName,email,phoneNumber,company,jobTitle,city,region,country,notes);
+        InsertContact.addContact(firstName, lastName, email, phoneNumber, company, jobTitle, city, region, country, notes);
+
+
+        // InsertContact.addContact(firstName, lastName, phoneNumber, email);
+
+
     }
     
 
@@ -128,6 +124,6 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
-        DeleteContact.deleteContact(firstName, lastName);
+        
     }
 }
