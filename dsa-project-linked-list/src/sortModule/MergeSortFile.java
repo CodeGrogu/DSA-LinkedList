@@ -6,8 +6,8 @@ import java.util.*;
 // method is called everytime the program starts up, so that the contacts are always sorted.
 public class MergeSortFile {
     public static void sortTheCsv() {
-        String inputFilePath = "src\\data\\contacts.csv";
-        String outputFilePath = "src\\data\\contacts.csv";
+        String inputFilePath = "dsa-project-linked-list\\src\\data\\contacts.csv";
+        String outputFilePath = "dsa-project-linked-list\\src\\data\\contacts.csv";
         List<String[]> rows = new ArrayList<>();
     
         try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath))) {

@@ -1,14 +1,13 @@
 import BinarySearch.BinarySearch;
+import Searchmodule.SearchContact;
+import deleteContactModule.DeleteContact;
+
 import java.util.Scanner;
 
-import deleteContactModule.DeleteContact;
 import sortModule.MergeSortFile;
 
-import updateModule.UpdateContact;
 
 import displayContactModule.DisplayContacts;
-import SearchModule.SearchContact;
-
 import insertContactModule.InsertContact;
 
 public class Main {
@@ -87,7 +86,24 @@ public class Main {
         String phoneNumber = scanner.nextLine();
         System.out.print("Enter Email: ");
         String email = scanner.nextLine();
-        InsertContact.addContact(firstName, lastName, phoneNumber, email);
+        System.out.print("Enter Address: ");
+        String address = scanner.nextLine();
+        System.out.print("Enter Company: ");
+        String company = scanner.nextLine();
+        System.out.print("Enter Job Title: ");
+        String jobTitle = scanner.nextLine();
+        System.out.print("Enter City: ");
+        String city = scanner.nextLine();
+        System.out.print("Enter Region: ");
+        String region = scanner.nextLine();
+        System.out.print("Enter Country: ");
+        String country = scanner.nextLine();
+        System.out.print("Enter Notes: ");
+        String notes = scanner.nextLine();
+        InsertContact.addContact(firstName, lastName, email, phoneNumber, company, jobTitle, city, region, country, notes);
+
+
+        // InsertContact.addContact(firstName, lastName, phoneNumber, email);
 
 
     }
@@ -108,5 +124,6 @@ public class Main {
         String firstName = scanner.nextLine();
         System.out.print("Enter last name: ");
         String lastName = scanner.nextLine();
+        
     }
 }
